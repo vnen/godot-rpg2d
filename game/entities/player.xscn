@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="2" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+<resource_file type="PackedScene" subresource_count="6" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://art/lpc-base-assets/sprites/people/male_walkcycle.png" type="Texture" index="0"></ext_resource>
+	<resource type="Animation" path="local://1">
+		<string name="resource/name"> "walk_west" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 9 </int>
+				<int> 17 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://2">
+		<string name="resource/name"> "walk_north" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 1 </int>
+				<int> 8 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://3">
+		<string name="resource/name"> "walk_south" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 19 </int>
+				<int> 26 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://4">
+		<string name="resource/name"> "walk_east" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 27 </int>
+				<int> 36 </int>
+			</array>
+		</dictionary>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -8,7 +100,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="12">
+			<string_array  len="26">
 				<string> "Player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "input/pickable" </string>
@@ -21,13 +113,27 @@
 				<string> "texture" </string>
 				<string> "vframes" </string>
 				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "animation" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/walk_west" </string>
+				<string> "anims/walk_north" </string>
+				<string> "anims/walk_south" </string>
+				<string> "anims/walk_east" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 2 </int>
+			<int> 3 </int>
 			<string> "nodes" </string>
-			<int_array  len="30"> 				-1, -1, 1, 0, -1, 5, 2, 0, 3, 1, 4, 1, 5, 2, 6, 3, 0, 0, 0, 8, 7, -1, 3, 9, 4, 10, 5, 11, 6, 0 </int_array>
+			<int_array  len="61"> 				-1, -1, 1, 0, -1, 5, 2, 0, 3, 1, 4, 1, 5, 2, 6, 3, 0, 0, 0, 8, 7, -1, 4, 9, 4, 10, 5, 11, 6, 12, 7, 0, 0, 0, 14, 13, -1, 11, 15, 1, 16, 8, 17, 9, 18, 10, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 24, 16, 25, 17, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="7" shared="false">
+			<array  len="18" shared="false">
 				<bool> False </bool>
 				<int> 1 </int>
 				<real> 0.08 </real>
@@ -39,7 +145,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -383.219, -180.068 </vector2>
+							<vector2> -203.145, -83.7498 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -59,7 +165,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.814506 </real>
+							<real> 2.050546 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -155,8 +261,14 @@
 						</dictionary>
 						<string> "Anim" </string>
 						<dictionary  shared="false">
+							<string> "animation" </string>
+							<string> "walk_east" </string>
+							<string> "editing" </string>
+							<bool> True </bool>
+							<string> "player" </string>
+							<node_path> "animation" </node_path>
 							<string> "visible" </string>
-							<bool> False </bool>
+							<bool> True </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -170,6 +282,18 @@
 				<resource  external="0">  </resource>
 				<int> 4 </int>
 				<int> 9 </int>
+				<int> 31 </int>
+				<real> 0 </real>
+				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://1">  </resource>
+				<resource  resource_type="Animation" path="local://2">  </resource>
+				<resource  resource_type="Animation" path="local://3">  </resource>
+				<resource  resource_type="Animation" path="local://4">  </resource>
+				<bool> True </bool>
+				<real> 1 </real>
+				<array  len="0" shared="false">
+				</array>
+				<string> "" </string>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
