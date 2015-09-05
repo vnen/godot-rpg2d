@@ -1,2 +1,5 @@
 # Environment dependent files
 game/export.cfg
+
+# Temp files
+*~
