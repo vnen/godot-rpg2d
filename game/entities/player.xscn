@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+<resource_file type="PackedScene" subresource_count="10" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://art/lpc-base-assets/sprites/people/male_walkcycle.png" type="Texture" index="0"></ext_resource>
+	<resource type="Animation" path="local://7">
+		<string name="resource/name"> "idle_east" </string>
+		<real name="length"> 0.1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="1"> 				0 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="1"> 				1 </real_array>
+			<string> "values" </string>
+			<array  len="1" shared="false">
+				<int> 27 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://5">
+		<string name="resource/name"> "idle_north" </string>
+		<real name="length"> 0.1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="1"> 				0 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="1"> 				1 </real_array>
+			<string> "values" </string>
+			<array  len="1" shared="false">
+				<int> 0 </int>
+			</array>
+		</dictionary>
+
+	</resource>
 	<resource type="Animation" path="local://1">
 		<string name="resource/name"> "walk_west" </string>
 		<real name="length"> 1 </real>
@@ -47,9 +91,9 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://3">
-		<string name="resource/name"> "walk_south" </string>
-		<real name="length"> 1 </real>
+	<resource type="Animation" path="local://6">
+		<string name="resource/name"> "idle_west" </string>
+		<real name="length"> 0.1 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "value" </string>
@@ -57,15 +101,14 @@
 		<int name="tracks/0/interp"> 1 </int>
 		<dictionary name="tracks/0/keys" shared="false">
 			<string> "cont" </string>
-			<bool> True </bool>
+			<bool> False </bool>
 			<string> "times" </string>
-			<real_array  len="2"> 				0, 1 </real_array>
+			<real_array  len="1"> 				0 </real_array>
 			<string> "transitions" </string>
-			<real_array  len="2"> 				1, 1 </real_array>
+			<real_array  len="1"> 				1 </real_array>
 			<string> "values" </string>
-			<array  len="2" shared="false">
-				<int> 19 </int>
-				<int> 26 </int>
+			<array  len="1" shared="false">
+				<int> 9 </int>
 			</array>
 		</dictionary>
 
@@ -93,6 +136,51 @@
 		</dictionary>
 
 	</resource>
+	<resource type="Animation" path="local://3">
+		<string name="resource/name"> "walk_south" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 19 </int>
+				<int> 26 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://8">
+		<string name="resource/name"> "idle_south" </string>
+		<real name="length"> 0.1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "times" </string>
+			<real_array  len="1"> 				0 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="1"> 				1 </real_array>
+			<string> "values" </string>
+			<array  len="1" shared="false">
+				<int> 18 </int>
+			</array>
+		</dictionary>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -100,7 +188,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="26">
+			<string_array  len="30">
 				<string> "Player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "input/pickable" </string>
@@ -119,10 +207,14 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
+				<string> "anims/idle_east" </string>
+				<string> "anims/idle_north" </string>
 				<string> "anims/walk_west" </string>
 				<string> "anims/walk_north" </string>
-				<string> "anims/walk_south" </string>
+				<string> "anims/idle_west" </string>
 				<string> "anims/walk_east" </string>
+				<string> "anims/walk_south" </string>
+				<string> "anims/idle_south" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -131,9 +223,9 @@
 			<string> "node_count" </string>
 			<int> 3 </int>
 			<string> "nodes" </string>
-			<int_array  len="61"> 				-1, -1, 1, 0, -1, 5, 2, 0, 3, 1, 4, 1, 5, 2, 6, 3, 0, 0, 0, 8, 7, -1, 4, 9, 4, 10, 5, 11, 6, 12, 7, 0, 0, 0, 14, 13, -1, 11, 15, 1, 16, 8, 17, 9, 18, 10, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 24, 16, 25, 17, 0 </int_array>
+			<int_array  len="69"> 				-1, -1, 1, 0, -1, 5, 2, 0, 3, 1, 4, 1, 5, 2, 6, 3, 0, 0, 0, 8, 7, -1, 4, 9, 4, 10, 5, 11, 6, 12, 7, 0, 0, 0, 14, 13, -1, 15, 15, 1, 16, 8, 17, 9, 18, 10, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 24, 16, 25, 17, 26, 18, 27, 19, 28, 20, 29, 21, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="18" shared="false">
+			<array  len="22" shared="false">
 				<bool> False </bool>
 				<int> 1 </int>
 				<real> 0.08 </real>
@@ -262,7 +354,7 @@
 						<string> "Anim" </string>
 						<dictionary  shared="false">
 							<string> "animation" </string>
-							<string> "walk_east" </string>
+							<string> "idle_east" </string>
 							<string> "editing" </string>
 							<bool> True </bool>
 							<string> "player" </string>
@@ -282,13 +374,17 @@
 				<resource  external="0">  </resource>
 				<int> 4 </int>
 				<int> 9 </int>
-				<int> 31 </int>
+				<int> 27 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://7">  </resource>
+				<resource  resource_type="Animation" path="local://5">  </resource>
 				<resource  resource_type="Animation" path="local://1">  </resource>
 				<resource  resource_type="Animation" path="local://2">  </resource>
-				<resource  resource_type="Animation" path="local://3">  </resource>
+				<resource  resource_type="Animation" path="local://6">  </resource>
 				<resource  resource_type="Animation" path="local://4">  </resource>
+				<resource  resource_type="Animation" path="local://3">  </resource>
+				<resource  resource_type="Animation" path="local://8">  </resource>
 				<bool> True </bool>
 				<real> 1 </real>
 				<array  len="0" shared="false">
