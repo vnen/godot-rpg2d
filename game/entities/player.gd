@@ -13,6 +13,7 @@ const WALK=1
 
 # Configuration variables
 export(float) var walk_speed = 120.0
+export(float) var walk_animation_scale = 1.2
 
 # State keeping
 var current_animation=IDLE
@@ -23,8 +24,8 @@ func _ready():
 	var treeplayer = get_node("treeplayer")
 	treeplayer.transition_node_set_current("movement_transition", current_animation)
 	treeplayer.transition_node_set_current("idle_transition", current_direction)
+	treeplayer.timescale_node_set_scale("walk_scale", walk_animation_scale)
 	treeplayer.set_active(true)
-	treeplayer.print_tree()
 	set_process(true)
 
 func _process(delta):

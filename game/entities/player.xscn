@@ -189,7 +189,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="37">
+			<string_array  len="38">
 				<string> "Player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "input/pickable" </string>
@@ -199,6 +199,7 @@
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "walk_speed" </string>
+				<string> "walk_animation_scale" </string>
 				<string> "body" </string>
 				<string> "Sprite" </string>
 				<string> "texture" </string>
@@ -231,9 +232,9 @@
 			<string> "node_count" </string>
 			<int> 4 </int>
 			<string> "nodes" </string>
-			<int_array  len="86"> 				-1, -1, 1, 0, -1, 7, 2, 0, 3, 1, 4, 1, 5, 2, 6, 3, 7, 4, 8, 5, 0, 0, 0, 10, 9, -1, 4, 11, 6, 12, 7, 13, 8, 14, 9, 0, 0, 0, 16, 15, -1, 15, 17, 1, 18, 10, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 24, 16, 25, 17, 26, 18, 27, 19, 28, 20, 29, 21, 30, 22, 31, 23, 0, 0, 0, 33, 32, -1, 3, 34, 11, 35, 24, 36, 25, 0 </int_array>
+			<int_array  len="88"> 				-1, -1, 1, 0, -1, 8, 2, 0, 3, 1, 4, 1, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 0, 0, 0, 11, 10, -1, 4, 12, 7, 13, 8, 14, 9, 15, 10, 0, 0, 0, 17, 16, -1, 15, 18, 1, 19, 11, 20, 12, 21, 13, 22, 14, 23, 15, 24, 16, 25, 17, 26, 18, 27, 19, 28, 20, 29, 21, 30, 22, 31, 23, 32, 24, 0, 0, 0, 34, 33, -1, 3, 35, 12, 36, 25, 37, 26, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="26" shared="false">
+			<array  len="27" shared="false">
 				<bool> False </bool>
 				<int> 1 </int>
 				<real> 0.08 </real>
@@ -374,7 +375,8 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<real> 150 </real>
+				<real> 120 </real>
+				<real> 1.2 </real>
 				<resource  external="1">  </resource>
 				<int> 4 </int>
 				<int> 9 </int>
@@ -399,14 +401,14 @@
 					<string> "active" </string>
 					<bool> False </bool>
 					<string> "connections" </string>
-					<array  len="33" shared="false">
+					<array  len="36" shared="false">
 						<string> "movement_transition" </string>
 						<string> "out" </string>
 						<int> 0 </int>
 						<string> "idle_transition" </string>
 						<string> "movement_transition" </string>
 						<int> 0 </int>
-						<string> "walk_transition" </string>
+						<string> "walk_scale" </string>
 						<string> "movement_transition" </string>
 						<int> 1 </int>
 						<string> "idle_north" </string>
@@ -433,16 +435,19 @@
 						<string> "walk_east" </string>
 						<string> "walk_transition" </string>
 						<int> 3 </int>
+						<string> "walk_transition" </string>
+						<string> "walk_scale" </string>
+						<int> 0 </int>
 					</array>
 					<string> "master" </string>
 					<node_path> "../animation" </node_path>
 					<string> "nodes" </string>
-					<array  len="12" shared="false">
+					<array  len="13" shared="false">
 						<dictionary  shared="false">
 							<string> "id" </string>
 							<string> "out" </string>
 							<string> "pos" </string>
-							<vector2> 696, 328 </vector2>
+							<vector2> 696, 331 </vector2>
 							<string> "type" </string>
 							<string> "output" </string>
 						</dictionary>
@@ -450,7 +455,7 @@
 							<string> "id" </string>
 							<string> "movement_transition" </string>
 							<string> "pos" </string>
-							<vector2> 412, 331 </vector2>
+							<vector2> 509, 331 </vector2>
 							<string> "transitions" </string>
 							<array  len="2" shared="false">
 								<dictionary  shared="false">
@@ -570,7 +575,7 @@
 							<string> "id" </string>
 							<string> "walk_transition" </string>
 							<string> "pos" </string>
-							<vector2> 253, 471 </vector2>
+							<vector2> 226, 445 </vector2>
 							<string> "transitions" </string>
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
@@ -604,6 +609,16 @@
 							<vector2> 37, 207 </vector2>
 							<string> "type" </string>
 							<string> "animation" </string>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "id" </string>
+							<string> "walk_scale" </string>
+							<string> "pos" </string>
+							<vector2> 380, 384 </vector2>
+							<string> "scale" </string>
+							<real> 1 </real>
+							<string> "type" </string>
+							<string> "timescale" </string>
 						</dictionary>
 					</array>
 				</dictionary>
