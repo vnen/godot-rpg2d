@@ -51,7 +51,7 @@ func _process(delta):
 		direction.x = 1
 		anim_direction = EAST
 
-	set_pos(get_pos() + direction * walk_speed * delta);
+	move(direction * walk_speed * delta);
 
 	current_direction = anim_direction
 	if(move_north or move_west or move_south or move_east):
