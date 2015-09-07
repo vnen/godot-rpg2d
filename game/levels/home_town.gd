@@ -47,7 +47,15 @@ func make_walls():
 func _process(delta):
 	var follow = get_node("npc_path/follow")
 	var npc = get_node("Npc")
+	var old_offset = follow.get_offset()
 
 	follow.set_offset(follow.get_offset() + (npc.walk_speed * delta))
 	npc.move_to(follow.get_pos())
-	npc.update_travel(npc.get_travel())
+
+	var travel = npc.get_travel()
+	if(travel.length() < 0.5):
+		follow.set_offset(old_offset)
+		npc.set_pos(follow.get_pos())
+		travel = Vector2(0,0)
+
+	npc.update_travel(travel)
