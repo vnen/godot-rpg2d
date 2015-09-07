@@ -9,6 +9,11 @@ func get_size():
 func _ready():
 	map_size = Vector2(1280, 800)
 	make_walls()
+	set_process(true)
+	var follow = get_node("npc_path/follow")
+	var npc = get_node("Npc")
+	
+	npc.set_pos(follow.get_pos())
 
 func make_walls():
 	var wall_half_width = 10
@@ -38,3 +43,10 @@ func make_walls():
 	add_child(right_wall)
 	add_child(top_wall)
 	add_child(bottom_wall)
+
+func _process(delta):
+	var follow = get_node("npc_path/follow")
+	var npc = get_node("Npc")
+
+	follow.set_offset(follow.get_offset() + (npc.walk_speed * delta))
+	npc.move_to(follow.get_pos())
