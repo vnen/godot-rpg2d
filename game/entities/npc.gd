@@ -28,20 +28,6 @@ func _ready():
 	treeplayer.set_active(true)
 	set_process(true)
 
-func _process(delta):
-	var move_north = Input.is_action_pressed("move_north")
-	var move_west = Input.is_action_pressed("move_west")
-	var move_south = Input.is_action_pressed("move_south")
-	var move_east = Input.is_action_pressed("move_east")
-
-	var direction = Vector2(0,0)
-	var animation = IDLE
-	var anim_direction = current_direction
-
-	move(direction * walk_speed * delta);
-
-	update_animation()
-
 func update_animation():
 	var tree_player = get_node("treeplayer")
 	tree_player.transition_node_set_current("movement_transition", current_animation)
@@ -49,3 +35,21 @@ func update_animation():
 		tree_player.transition_node_set_current("idle_transition", current_direction)
 	else:
 		tree_player.transition_node_set_current("walk_transition", current_direction)
+
+func update_travel(travel):
+	if(travel.length() > 0):
+		var angle = travel.angle_to(Vector2(1,0))
+		current_direction = get_direction_from_angle(angle)
+		current_animation = WALK
+	else:
+		current_animation = IDLE
+	update_animation()
+
+func get_direction_from_angle(angle):
+	if(angle >= -((3 * PI) / 4) and angle < -(PI / 4)):
+		return NORTH
+	elif(angle >= -(PI / 4) and angle < (PI / 4) ):
+		return EAST
+	elif(angle >= (PI / 4) and angle < ((3 * PI) / 4)):
+		return SOUTH
+	return WEST

@@ -50,3 +50,4 @@ func _process(delta):
 
 	follow.set_offset(follow.get_offset() + (npc.walk_speed * delta))
 	npc.move_to(follow.get_pos())
+	npc.update_travel(npc.get_travel())
