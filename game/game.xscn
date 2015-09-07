@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+<resource_file type="PackedScene" subresource_count="5" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://art/ui-elements-lpc/flare-specific/dialog_box.png" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://levels/home_town.xscn" type="PackedScene" index="1"></ext_resource>
 	<ext_resource path="res://entities/player.xscn" type="PackedScene" index="2"></ext_resource>
 	<main_resource>
@@ -10,7 +11,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="9">
+			<string_array  len="29">
 				<string> "game" </string>
 				<string> "Node2D" </string>
 				<string> "script/script" </string>
@@ -20,13 +21,33 @@
 				<string> "Player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "transform/pos" </string>
+				<string> "GUI" </string>
+				<string> "CanvasLayer" </string>
+				<string> "layer" </string>
+				<string> "offset" </string>
+				<string> "rotation" </string>
+				<string> "scale" </string>
+				<string> "dialog_box" </string>
+				<string> "TextureFrame" </string>
+				<string> "anchor/left" </string>
+				<string> "anchor/top" </string>
+				<string> "anchor/right" </string>
+				<string> "anchor/bottom" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "margin/right" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "texture" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 5 </int>
 			<string> "nodes" </string>
-			<int_array  len="35"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 1, 4, 2, 2, 5, 3, 3, 4, 0, 0, 0, 7, 6, 5, 3, 5, 3, 8, 6, 3, 7, 0 </int_array>
+			<int_array  len="81"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 1, 4, 2, 2, 5, 3, 3, 4, 0, 0, 0, 7, 6, 5, 3, 5, 3, 8, 6, 3, 7, 0, 0, 0, 10, 9, -1, 4, 11, 8, 12, 9, 13, 10, 14, 11, 0, 3, 0, 16, 15, -1, 12, 17, 12, 18, 8, 19, 12, 20, 8, 21, 13, 22, 14, 23, 15, 24, 16, 25, 16, 26, 17, 27, 17, 28, 18, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="8" shared="false">
+			<array  len="19" shared="false">
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
@@ -36,7 +57,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -502.579, -95.2096 </vector2>
+							<vector2> 39.5624, 65.4187 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -440,6 +461,17 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
+				<int> 1 </int>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<vector2> 1, 1 </vector2>
+				<int> 3 </int>
+				<real> 320 </real>
+				<real> 120 </real>
+				<real> -320 </real>
+				<bool> True </bool>
+				<int> 2 </int>
+				<resource  external="3">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
