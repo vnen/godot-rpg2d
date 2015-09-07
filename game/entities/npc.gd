@@ -14,6 +14,7 @@ const WALK=1
 # Configuration variables
 export(float) var walk_speed = 120.0
 export(float) var walk_animation_scale = 1.2
+export(float) var movement_threshold = 0.8 # Percentage of standard walk travel
 
 # State keeping
 var current_animation=IDLE
@@ -53,3 +54,20 @@ func get_direction_from_angle(angle):
 	elif(angle >= (PI / 4) and angle < ((3 * PI) / 4)):
 		return SOUTH
 	return WEST
+
+# follow is a PathFollow2D node
+func follow_path(follow, delta):
+	var old_offset = follow.get_offset()
+
+	var standard_travel = walk_speed * delta
+
+	follow.set_offset(follow.get_offset() + (walk_speed * delta))
+	move_to(follow.get_pos())
+
+	var travel = get_travel()
+	if(travel.length() < movement_threshold * standard_travel):
+		follow.set_offset(old_offset)
+		set_pos(follow.get_pos())
+		travel = Vector2(0,0)
+
+	update_travel(travel)
