@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="5" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://art/ui-elements-lpc/flare-specific/dialog_box.png" type="Texture" index="3"></ext_resource>
 	<ext_resource path="res://levels/home_town.xscn" type="PackedScene" index="1"></ext_resource>
+	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://entities/player.xscn" type="PackedScene" index="2"></ext_resource>
+	<ext_resource path="res://art/ui-elements-lpc/flare-specific/dialog_box.png" type="Texture" index="3"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -67,7 +67,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> 326.731, 476.898 </vector2>
+							<vector2> -80.0496, 107.835 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -87,7 +87,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 1.360374 </real>
+							<real> 0.598737 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">

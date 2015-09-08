@@ -35,6 +35,7 @@ func _input(event):
 		for body in interaction_area.get_overlapping_bodies():
 			if(body.has_method("interact")):
 				body.interact(self)
+		get_tree().set_input_as_handled()
 
 func _process(delta):
 	var move_north = Input.is_action_pressed("move_north")
