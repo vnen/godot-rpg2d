@@ -1,4 +1,4 @@
-
+	
 extends KinematicBody2D
 
 # Direction constants
@@ -27,6 +27,15 @@ func _ready():
 	treeplayer.timescale_node_set_scale("walk_scale", walk_animation_scale)
 	treeplayer.set_active(true)
 	set_process(true)
+	set_process_input(true)
+
+func _input(event):
+	if(event.is_action("interact") and event.is_pressed() and !event.is_echo()):
+		print("Interaction")
+		var interaction_area = get_node("interaction_area")
+		for body in interaction_area.get_overlapping_bodies():
+			if(body.has_method("interact")):
+				body.interact(self)
 
 func _process(delta):
 	var move_north = Input.is_action_pressed("move_north")
