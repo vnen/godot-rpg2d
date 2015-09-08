@@ -57,6 +57,8 @@ func get_direction_from_angle(angle):
 
 # follow is a PathFollow2D node
 func follow_path(follow, delta):
+	if(get_tree().is_paused()):
+		return
 	var old_offset = follow.get_offset()
 
 	var standard_travel = walk_speed * delta
@@ -74,4 +76,11 @@ func follow_path(follow, delta):
 
 func interact(body):
 	var interaction = get_node("/root/interaction")
+	var angle = (body.get_pos() - get_pos()).normalized().angle_to(Vector2(1, 0))
+	current_direction = get_direction_from_angle(angle)
+	current_animation = IDLE
+	update_travel(Vector2(0,0))
+	update()
+	print(current_direction)
+
 	interaction.say("Hello " + body.get_name(), get_name())
