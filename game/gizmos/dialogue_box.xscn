@@ -22,7 +22,7 @@
 				<string> "size_flags/vertical" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "text_speed" </string>
+				<string> "text_wait" </string>
 				<string> "dialog_box" </string>
 				<string> "TextureFrame" </string>
 				<string> "anchor/left" </string>
@@ -185,7 +185,7 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<real> 50 </real>
+				<real> 0.1 </real>
 				<int> 3 </int>
 				<real> 320 </real>
 				<real> 120 </real>

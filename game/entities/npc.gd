@@ -74,4 +74,4 @@ func follow_path(follow, delta):
 
 func interact(body):
 	var interaction = get_node("/root/interaction")
-	interaction.say("Hello " + body.get_name())
+	interaction.say("Hello " + body.get_name(), get_name())

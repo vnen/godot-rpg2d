@@ -21,7 +21,7 @@ func say(what, who = null):
 		var text_box = box.get_node("dialog_text")
 		var text = ""
 		if(who):
-			text = "[bold]" + str(who) + "[/bold]: "
+			text = "[b]" + str(who) + "[/b]: "
 		text += str(what)
 		text_box.set_bbcode(text)
 		box.next()
