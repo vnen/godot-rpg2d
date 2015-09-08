@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="5" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://levels/home_town.xscn" type="PackedScene" index="1"></ext_resource>
-	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://entities/player.xscn" type="PackedScene" index="2"></ext_resource>
-	<ext_resource path="res://art/ui-elements-lpc/flare-specific/dialog_box.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://gizmos/dialogue_box.xscn" type="PackedScene" index="3"></ext_resource>
+	<ext_resource path="res://levels/home_town.xscn" type="PackedScene" index="1"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -11,7 +11,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="39">
+			<string_array  len="17">
 				<string> "game" </string>
 				<string> "Node2D" </string>
 				<string> "script/script" </string>
@@ -29,39 +29,17 @@
 				<string> "scale" </string>
 				<string> "dialogue" </string>
 				<string> "Control" </string>
-				<string> "visibility/visible" </string>
-				<string> "anchor/right" </string>
-				<string> "anchor/bottom" </string>
-				<string> "focus/ignore_mouse" </string>
-				<string> "focus/stop_mouse" </string>
-				<string> "size_flags/horizontal" </string>
-				<string> "size_flags/vertical" </string>
-				<string> "dialog_box" </string>
-				<string> "TextureFrame" </string>
-				<string> "anchor/left" </string>
-				<string> "anchor/top" </string>
-				<string> "margin/left" </string>
-				<string> "margin/top" </string>
-				<string> "margin/right" </string>
-				<string> "texture" </string>
-				<string> "dialogue_box" </string>
-				<string> "dialog_text" </string>
-				<string> "RichTextLabel" </string>
-				<string> "margin/bottom" </string>
-				<string> "bbcode/enabled" </string>
-				<string> "bbcode/bbcode" </string>
-				<string> "visible_characters" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 7 </int>
+			<int> 5 </int>
 			<string> "nodes" </string>
-			<int_array  len="141"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 1, 4, 2, 2, 5, 3, 3, 4, 0, 0, 0, 7, 6, 5, 3, 5, 3, 8, 6, 3, 7, 0, 0, 0, 10, 9, -1, 4, 11, 8, 12, 9, 13, 10, 14, 11, 0, 3, 0, 16, 15, -1, 7, 17, 12, 18, 8, 19, 8, 20, 12, 21, 13, 22, 14, 23, 14, 1, 15, 4, 0, 25, 24, -1, 12, 26, 15, 27, 8, 18, 15, 19, 8, 28, 16, 29, 17, 30, 18, 20, 13, 21, 13, 22, 14, 23, 14, 31, 19, 1, 32, 4, 0, 34, 33, -1, 15, 26, 15, 27, 8, 18, 15, 19, 8, 28, 20, 29, 21, 30, 22, 35, 23, 20, 12, 21, 13, 22, 14, 23, 14, 36, 13, 37, 24, 38, 25, 0 </int_array>
+			<int_array  len="59"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 1, 4, 2, 2, 5, 3, 3, 4, 0, 0, 0, 7, 6, 5, 3, 5, 3, 8, 6, 3, 7, 0, 0, 0, 10, 9, -1, 4, 11, 8, 12, 9, 13, 10, 14, 11, 0, 3, 0, 16, 15, 12, 1, 5, 3, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="26" shared="false">
+			<array  len="13" shared="false">
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -475,20 +453,7 @@
 				<vector2> 0, 0 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
-				<bool> False </bool>
-				<bool> True </bool>
-				<int> 2 </int>
-				<int> 3 </int>
-				<real> 320 </real>
-				<real> 120 </real>
-				<real> -320 </real>
 				<resource  external="3">  </resource>
-				<real> 273 </real>
-				<real> 108 </real>
-				<real> -274 </real>
-				<real> 36 </real>
-				<string> "" </string>
-				<int> -1 </int>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>

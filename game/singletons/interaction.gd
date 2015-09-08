@@ -1,5 +1,5 @@
 
-extends Node
+extends Control
 
 var dialogue_on = false
 
@@ -11,9 +11,9 @@ func _input(event):
 	if(dialogue_on):
 		if(event.is_action("interact") and event.is_pressed() and !event.is_echo()):
 			for box in get_tree().get_nodes_in_group("dialogue"):
-				box.hide()
+				dialogue_on = !box.next()
 			var tree = get_tree()
-			tree.set_pause(false)
+			tree.set_pause(dialogue_on)
 			tree.set_input_as_handled()
 
 func say(what, who = null):
@@ -24,6 +24,6 @@ func say(what, who = null):
 			text = "[bold]" + str(who) + "[/bold]: "
 		text += str(what)
 		text_box.set_bbcode(text)
-		box.show()
+		box.next()
 	get_tree().set_pause(true)
 	dialogue_on = true
