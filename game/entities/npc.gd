@@ -73,4 +73,5 @@ func follow_path(follow, delta):
 	update_travel(travel)
 
 func interact(body):
-	print("Hello " + body.get_name())
+	var interaction = get_node("/root/interaction")
+	interaction.say("Hello " + body.get_name())
