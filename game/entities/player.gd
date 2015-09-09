@@ -72,6 +72,15 @@ func _process(delta):
 		current_animation = IDLE
 
 	update_animation()
+	
+	# Adjust Z order
+	for body in get_tree().get_nodes_in_group("entity"):
+		if(body == self):
+			continue
+		if(body.get_global_pos().y > get_global_pos().y):
+			body.set_z(get_z() + 1)
+		else:
+			body.set_z(get_z() - 1)
 
 func update_animation():
 	var tree_player = get_node("treeplayer")
