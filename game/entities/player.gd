@@ -33,7 +33,8 @@ func _input(event):
 	if(event.is_action("interact") and event.is_pressed() and !event.is_echo()):
 		var interaction_area = get_node("interaction_area")
 		for body in interaction_area.get_overlapping_bodies():
-			if(body.has_method("interact")):
+			if(body.has_method("interact") and
+				get_direction_from_angle((body.get_pos() - get_pos()).normalized().angle_to(Vector2(1, 0))) == current_direction):
 				body.interact(self)
 		get_tree().set_input_as_handled()
 
@@ -77,3 +78,12 @@ func update_animation():
 		tree_player.transition_node_set_current("idle_transition", current_direction)
 	else:
 		tree_player.transition_node_set_current("walk_transition", current_direction)
+
+func get_direction_from_angle(angle):
+	if(angle >= -((3 * PI) / 4) and angle < -(PI / 4)):
+		return NORTH
+	elif(angle >= -(PI / 4) and angle < (PI / 4) ):
+		return EAST
+	elif(angle >= (PI / 4) and angle < ((3 * PI) / 4)):
+		return SOUTH
+	return WEST
