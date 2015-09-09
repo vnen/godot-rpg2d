@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://levels/home_town.xscn" type="PackedScene" index="1"></ext_resource>
+<resource_file type="PackedScene" subresource_count="5" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://entities/player.xscn" type="PackedScene" index="2"></ext_resource>
+	<ext_resource path="res://game.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://gizmos/dialogue_box.xscn" type="PackedScene" index="3"></ext_resource>
+	<ext_resource path="res://levels/home_town.xscn" type="PackedScene" index="1"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
@@ -10,7 +11,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="9">
+			<string_array  len="17">
 				<string> "game" </string>
 				<string> "Node2D" </string>
 				<string> "script/script" </string>
@@ -20,13 +21,21 @@
 				<string> "Player" </string>
 				<string> "KinematicBody2D" </string>
 				<string> "transform/pos" </string>
+				<string> "GUI" </string>
+				<string> "CanvasLayer" </string>
+				<string> "layer" </string>
+				<string> "offset" </string>
+				<string> "rotation" </string>
+				<string> "scale" </string>
+				<string> "dialogue" </string>
+				<string> "Control" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 5 </int>
 			<string> "nodes" </string>
-			<int_array  len="35"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 1, 4, 2, 2, 5, 3, 3, 4, 0, 0, 0, 7, 6, 5, 3, 5, 3, 8, 6, 3, 7, 0 </int_array>
+			<int_array  len="59"> 				-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 0, 0, 1, 4, 2, 2, 5, 3, 3, 4, 0, 0, 0, 7, 6, 5, 3, 5, 3, 8, 6, 3, 7, 0, 0, 0, 10, 9, -1, 4, 11, 8, 12, 9, 13, 10, 14, 11, 0, 3, 0, 16, 15, 12, 1, 5, 3, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="8" shared="false">
+			<array  len="13" shared="false">
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
@@ -36,7 +45,7 @@
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -502.579, -95.2096 </vector2>
+							<vector2> -80.0496, 107.835 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -56,7 +65,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.54036 </real>
+							<real> 0.598737 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -440,6 +449,11 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
+				<int> 1 </int>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<vector2> 1, 1 </vector2>
+				<resource  external="3">  </resource>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
