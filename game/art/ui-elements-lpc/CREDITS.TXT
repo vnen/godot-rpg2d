@@ -1,0 +1,20 @@
+Title:
+    [LPC] Pennomi&#039;s UI Elements
+
+Author:
+    pennomi (http://opengameart.org/users/pennomi)
+
+Collaborators:
+    Buch (http://opengameart.org/users/buch)
+    cemkalyoncu (http://opengameart.org/users/cemkalyoncu)
+
+URL:
+    http://opengameart.org/content/lpc-pennomis-ui-elements
+
+License(s):
+    * CC-BY-SA 3.0 ( http://creativecommons.org/licenses/by-sa/3.0/legalcode )
+    * GPL 3.0 ( http://www.gnu.org/licenses/gpl-3.0.html )
+
+SPECIAL ATTRIBUTION INSTRUCTIONS:
+    Please attribute all collaborators and include a link back to OpenGameArt.org
+ 
