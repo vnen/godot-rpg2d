@@ -30,7 +30,7 @@ func _ready():
 	set_process_input(true)
 
 func _input(event):
-	if(event.is_action("interact") and event.is_pressed() and !event.is_echo()):
+	if(!get_tree().is_paused() and event.is_action("interact") and event.is_pressed() and !event.is_echo()):
 		var interaction_area = get_node("interaction_area")
 		for body in interaction_area.get_overlapping_bodies():
 			if(body.has_method("interact") and
@@ -39,6 +39,7 @@ func _input(event):
 		get_tree().set_input_as_handled()
 
 func _process(delta):
+	var is_paused = get_tree().is_paused();
 	var move_north = Input.is_action_pressed("move_north")
 	var move_west = Input.is_action_pressed("move_west")
 	var move_south = Input.is_action_pressed("move_south")
@@ -48,23 +49,24 @@ func _process(delta):
 	var animation = IDLE
 	var anim_direction = current_direction
 
-	if(move_north):
-		direction.y = -1
-		anim_direction = NORTH
-	elif(move_south):
-		direction.y = 1
-		anim_direction = SOUTH
-	if(move_west):
-		direction.x = -1
-		anim_direction = WEST
-	elif(move_east):
-		direction.x = 1
-		anim_direction = EAST
+	if(!is_paused):
+		if(move_north):
+			direction.y = -1
+			anim_direction = NORTH
+		elif(move_south):
+			direction.y = 1
+			anim_direction = SOUTH
+		if(move_west):
+			direction.x = -1
+			anim_direction = WEST
+		elif(move_east):
+			direction.x = 1
+			anim_direction = EAST
 
-	move(direction * walk_speed * delta);
+		move(direction * walk_speed * delta);
 
 	current_direction = anim_direction
-	if(move_north or move_west or move_south or move_east):
+	if(!is_paused and (move_north or move_west or move_south or move_east)):
 		current_animation = WALK
 	else:
 		current_animation = IDLE
