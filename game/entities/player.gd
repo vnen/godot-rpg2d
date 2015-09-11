@@ -37,8 +37,6 @@ func _input(event):
 				get_direction_from_angle((body.get_pos() - get_pos()).normalized().angle_to(Vector2(1, 0))) == current_direction):
 				body.interact(self)
 		get_tree().set_input_as_handled()
-	if(event.is_action("ui_cancel") and event.is_pressed() and !event.is_echo()):
-		get_node("/root/scene_manager").warp("home")
 
 func _process(delta):
 	var is_paused = get_tree().is_paused();
