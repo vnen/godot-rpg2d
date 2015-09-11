@@ -81,6 +81,5 @@ func interact(body):
 	current_animation = IDLE
 	update_travel(Vector2(0,0))
 	update()
-	print(current_direction)
 
 	interaction.say("Hello " + body.get_name(), get_name())
