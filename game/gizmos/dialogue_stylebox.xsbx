@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="StyleBoxTexture" subresource_count="2" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+	<ext_resource path="res://art/ui-elements-lpc/flare-specific/dialog_box.png" type="Texture" index="0"></ext_resource>
+	<main_resource>
+		<real name="content_margin/left"> 50 </real>
+		<real name="content_margin/right"> 50 </real>
+		<real name="content_margin/top"> 50 </real>
+		<real name="content_margin/bottom"> 50 </real>
+		<resource name="texture" external="0">  </resource>
+		<real name="margin/left"> 50 </real>
+		<real name="margin/right"> 50 </real>
+		<real name="margin/top"> 50 </real>
+		<real name="margin/bottom"> 50 </real>
+		<real name="expand_margin/left"> 0 </real>
+		<real name="expand_margin/right"> 0 </real>
+		<real name="expand_margin/top"> 0 </real>
+		<real name="expand_margin/bottom"> 0 </real>
+		<bool name="draw_center"> True </bool>
+
+	</main_resource>
+</resource_file>
