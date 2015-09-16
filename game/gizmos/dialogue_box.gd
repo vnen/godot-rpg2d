@@ -8,6 +8,7 @@ const STATUS_SHOWN = 2   # text shown and stopped
 
 # Exported vars
 export(float) var text_wait = 0.1 # Seconds between characters
+export(float) var horizontal_ratio = 0.1 # Panel anchored position ratio
 
 var current_status = STATUS_OFF setget ,get_status
 
@@ -18,6 +19,8 @@ func get_status():
 
 func _ready():
 	set_process(true)
+	set_anchor_and_margin( MARGIN_LEFT, ANCHOR_RATIO, horizontal_ratio)
+	set_anchor_and_margin( MARGIN_RIGHT, ANCHOR_RATIO, 1.0 - horizontal_ratio)
 
 func next():
 	if(current_status == STATUS_OFF):
