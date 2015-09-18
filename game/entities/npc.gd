@@ -83,7 +83,7 @@ func interact(body):
 	update()
 
 	interaction.say([
-		{ "msg": "Hello " + body.get_name(), "author": get_name() },
+		{ "msg": "Hello " + body.get_name() + ".", "author": get_name() },
 		{ "msg": "Hello " + get_name() + ". How are you?", "author": body.get_name() },
 		{ "msg": "I'm fine, thank you.", "author": get_name() }
 	])
