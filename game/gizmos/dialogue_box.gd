@@ -24,7 +24,6 @@ func _ready():
 	set_process(true)
 	set_anchor_and_margin( MARGIN_LEFT, ANCHOR_RATIO, horizontal_ratio)
 	set_anchor_and_margin( MARGIN_RIGHT, ANCHOR_RATIO, 1.0 - horizontal_ratio)
-	get_node("dialog_text").set_bbcode("")
 
 func next():
 	var dialog_text = get_node("dialog_text")
