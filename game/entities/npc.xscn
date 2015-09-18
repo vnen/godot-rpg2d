@@ -7,29 +7,6 @@
 		<vector2 name="extents"> 11.432, 7.6725 </vector2>
 
 	</resource>
-	<resource type="Animation" path="local://4">
-		<string name="resource/name"> "walk_east" </string>
-		<real name="length"> 1 </real>
-		<bool name="loop"> True </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "body:frame" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "times" </string>
-			<real_array  len="2"> 				0, 1 </real_array>
-			<string> "transitions" </string>
-			<real_array  len="2"> 				1.31951, 1 </real_array>
-			<string> "values" </string>
-			<array  len="2" shared="false">
-				<int> 28 </int>
-				<int> 35 </int>
-			</array>
-		</dictionary>
-
-	</resource>
 	<resource type="Animation" path="local://7">
 		<string name="resource/name"> "idle_east" </string>
 		<real name="length"> 0.1 </real>
@@ -74,9 +51,9 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://5">
-		<string name="resource/name"> "idle_north" </string>
-		<real name="length"> 0.1 </real>
+	<resource type="Animation" path="local://3">
+		<string name="resource/name"> "walk_south" </string>
+		<real name="length"> 1 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "value" </string>
@@ -84,14 +61,15 @@
 		<int name="tracks/0/interp"> 1 </int>
 		<dictionary name="tracks/0/keys" shared="false">
 			<string> "cont" </string>
-			<bool> False </bool>
+			<bool> True </bool>
 			<string> "times" </string>
-			<real_array  len="1"> 				0 </real_array>
+			<real_array  len="2"> 				0, 1 </real_array>
 			<string> "transitions" </string>
-			<real_array  len="1"> 				1 </real_array>
+			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
-			<array  len="1" shared="false">
-				<int> 0 </int>
+			<array  len="2" shared="false">
+				<int> 19 </int>
+				<int> 26 </int>
 			</array>
 		</dictionary>
 
@@ -119,9 +97,9 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://2">
-		<string name="resource/name"> "walk_north" </string>
-		<real name="length"> 1 </real>
+	<resource type="Animation" path="local://5">
+		<string name="resource/name"> "idle_north" </string>
+		<real name="length"> 0.1 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "value" </string>
@@ -129,21 +107,20 @@
 		<int name="tracks/0/interp"> 1 </int>
 		<dictionary name="tracks/0/keys" shared="false">
 			<string> "cont" </string>
-			<bool> True </bool>
+			<bool> False </bool>
 			<string> "times" </string>
-			<real_array  len="2"> 				0, 1 </real_array>
+			<real_array  len="1"> 				0 </real_array>
 			<string> "transitions" </string>
-			<real_array  len="2"> 				1, 1 </real_array>
+			<real_array  len="1"> 				1 </real_array>
 			<string> "values" </string>
-			<array  len="2" shared="false">
-				<int> 1 </int>
-				<int> 8 </int>
+			<array  len="1" shared="false">
+				<int> 0 </int>
 			</array>
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://3">
-		<string name="resource/name"> "walk_south" </string>
+	<resource type="Animation" path="local://4">
+		<string name="resource/name"> "walk_east" </string>
 		<real name="length"> 1 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
@@ -156,11 +133,11 @@
 			<string> "times" </string>
 			<real_array  len="2"> 				0, 1 </real_array>
 			<string> "transitions" </string>
-			<real_array  len="2"> 				1, 1 </real_array>
+			<real_array  len="2"> 				1.31951, 1 </real_array>
 			<string> "values" </string>
 			<array  len="2" shared="false">
-				<int> 19 </int>
-				<int> 26 </int>
+				<int> 28 </int>
+				<int> 35 </int>
 			</array>
 		</dictionary>
 
@@ -183,6 +160,29 @@
 			<string> "values" </string>
 			<array  len="1" shared="false">
 				<int> 9 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://2">
+		<string name="resource/name"> "walk_north" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "body:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 1 </int>
+				<int> 8 </int>
 			</array>
 		</dictionary>
 
@@ -226,14 +226,14 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
-				<string> "anims/walk_east" </string>
 				<string> "anims/idle_east" </string>
 				<string> "anims/idle_south" </string>
-				<string> "anims/idle_north" </string>
-				<string> "anims/walk_west" </string>
-				<string> "anims/walk_north" </string>
 				<string> "anims/walk_south" </string>
+				<string> "anims/walk_west" </string>
+				<string> "anims/idle_north" </string>
+				<string> "anims/walk_east" </string>
 				<string> "anims/idle_west" </string>
+				<string> "anims/walk_north" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -413,14 +413,14 @@
 				<int> 9 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
-				<resource  resource_type="Animation" path="local://4">  </resource>
 				<resource  resource_type="Animation" path="local://7">  </resource>
 				<resource  resource_type="Animation" path="local://8">  </resource>
-				<resource  resource_type="Animation" path="local://5">  </resource>
-				<resource  resource_type="Animation" path="local://1">  </resource>
-				<resource  resource_type="Animation" path="local://2">  </resource>
 				<resource  resource_type="Animation" path="local://3">  </resource>
+				<resource  resource_type="Animation" path="local://1">  </resource>
+				<resource  resource_type="Animation" path="local://5">  </resource>
+				<resource  resource_type="Animation" path="local://4">  </resource>
 				<resource  resource_type="Animation" path="local://6">  </resource>
+				<resource  resource_type="Animation" path="local://2">  </resource>
 				<bool> True </bool>
 				<real> 1 </real>
 				<array  len="0" shared="false">
@@ -435,27 +435,6 @@
 						<string> "movement_transition" </string>
 						<string> "out" </string>
 						<int> 0 </int>
-						<string> "walk_transition" </string>
-						<string> "walk_scale" </string>
-						<int> 0 </int>
-						<string> "walk_north" </string>
-						<string> "walk_transition" </string>
-						<int> 0 </int>
-						<string> "walk_west" </string>
-						<string> "walk_transition" </string>
-						<int> 1 </int>
-						<string> "walk_south" </string>
-						<string> "walk_transition" </string>
-						<int> 2 </int>
-						<string> "walk_east" </string>
-						<string> "walk_transition" </string>
-						<int> 3 </int>
-						<string> "idle_transition" </string>
-						<string> "movement_transition" </string>
-						<int> 0 </int>
-						<string> "walk_scale" </string>
-						<string> "movement_transition" </string>
-						<int> 1 </int>
 						<string> "idle_north" </string>
 						<string> "idle_transition" </string>
 						<int> 0 </int>
@@ -467,6 +446,27 @@
 						<int> 2 </int>
 						<string> "idle_east" </string>
 						<string> "idle_transition" </string>
+						<int> 3 </int>
+						<string> "walk_transition" </string>
+						<string> "walk_scale" </string>
+						<int> 0 </int>
+						<string> "idle_transition" </string>
+						<string> "movement_transition" </string>
+						<int> 0 </int>
+						<string> "walk_scale" </string>
+						<string> "movement_transition" </string>
+						<int> 1 </int>
+						<string> "walk_north" </string>
+						<string> "walk_transition" </string>
+						<int> 0 </int>
+						<string> "walk_west" </string>
+						<string> "walk_transition" </string>
+						<int> 1 </int>
+						<string> "walk_south" </string>
+						<string> "walk_transition" </string>
+						<int> 2 </int>
+						<string> "walk_east" </string>
+						<string> "walk_transition" </string>
 						<int> 3 </int>
 					</array>
 					<string> "master" </string>
@@ -480,26 +480,6 @@
 							<vector2> 696, 331 </vector2>
 							<string> "type" </string>
 							<string> "output" </string>
-						</dictionary>
-						<dictionary  shared="false">
-							<string> "id" </string>
-							<string> "walk_scale" </string>
-							<string> "pos" </string>
-							<vector2> 380, 384 </vector2>
-							<string> "scale" </string>
-							<real> 1 </real>
-							<string> "type" </string>
-							<string> "timescale" </string>
-						</dictionary>
-						<dictionary  shared="false">
-							<string> "from" </string>
-							<string> "walk_east" </string>
-							<string> "id" </string>
-							<string> "walk_east" </string>
-							<string> "pos" </string>
-							<vector2> 42, 609 </vector2>
-							<string> "type" </string>
-							<string> "animation" </string>
 						</dictionary>
 						<dictionary  shared="false">
 							<string> "from" </string>
@@ -518,76 +498,6 @@
 							<string> "idle_south" </string>
 							<string> "pos" </string>
 							<vector2> 37, 207 </vector2>
-							<string> "type" </string>
-							<string> "animation" </string>
-						</dictionary>
-						<dictionary  shared="false">
-							<string> "id" </string>
-							<string> "walk_transition" </string>
-							<string> "pos" </string>
-							<vector2> 226, 445 </vector2>
-							<string> "transitions" </string>
-							<array  len="4" shared="false">
-								<dictionary  shared="false">
-									<string> "auto_advance" </string>
-									<bool> False </bool>
-								</dictionary>
-								<dictionary  shared="false">
-									<string> "auto_advance" </string>
-									<bool> False </bool>
-								</dictionary>
-								<dictionary  shared="false">
-									<string> "auto_advance" </string>
-									<bool> False </bool>
-								</dictionary>
-								<dictionary  shared="false">
-									<string> "auto_advance" </string>
-									<bool> False </bool>
-								</dictionary>
-							</array>
-							<string> "type" </string>
-							<string> "transition" </string>
-							<string> "xfade" </string>
-							<real> 0 </real>
-						</dictionary>
-						<dictionary  shared="false">
-							<string> "id" </string>
-							<string> "movement_transition" </string>
-							<string> "pos" </string>
-							<vector2> 509, 331 </vector2>
-							<string> "transitions" </string>
-							<array  len="2" shared="false">
-								<dictionary  shared="false">
-									<string> "auto_advance" </string>
-									<bool> False </bool>
-								</dictionary>
-								<dictionary  shared="false">
-									<string> "auto_advance" </string>
-									<bool> False </bool>
-								</dictionary>
-							</array>
-							<string> "type" </string>
-							<string> "transition" </string>
-							<string> "xfade" </string>
-							<real> 0 </real>
-						</dictionary>
-						<dictionary  shared="false">
-							<string> "from" </string>
-							<string> "idle_north" </string>
-							<string> "id" </string>
-							<string> "idle_north" </string>
-							<string> "pos" </string>
-							<vector2> 34, 46 </vector2>
-							<string> "type" </string>
-							<string> "animation" </string>
-						</dictionary>
-						<dictionary  shared="false">
-							<string> "from" </string>
-							<string> "walk_west" </string>
-							<string> "id" </string>
-							<string> "walk_west" </string>
-							<string> "pos" </string>
-							<vector2> 34, 452 </vector2>
 							<string> "type" </string>
 							<string> "animation" </string>
 						</dictionary>
@@ -622,16 +532,6 @@
 						</dictionary>
 						<dictionary  shared="false">
 							<string> "from" </string>
-							<string> "walk_north" </string>
-							<string> "id" </string>
-							<string> "walk_north" </string>
-							<string> "pos" </string>
-							<vector2> 33, 375 </vector2>
-							<string> "type" </string>
-							<string> "animation" </string>
-						</dictionary>
-						<dictionary  shared="false">
-							<string> "from" </string>
 							<string> "walk_south" </string>
 							<string> "id" </string>
 							<string> "walk_south" </string>
@@ -642,11 +542,111 @@
 						</dictionary>
 						<dictionary  shared="false">
 							<string> "from" </string>
+							<string> "walk_west" </string>
+							<string> "id" </string>
+							<string> "walk_west" </string>
+							<string> "pos" </string>
+							<vector2> 34, 452 </vector2>
+							<string> "type" </string>
+							<string> "animation" </string>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "from" </string>
+							<string> "idle_north" </string>
+							<string> "id" </string>
+							<string> "idle_north" </string>
+							<string> "pos" </string>
+							<vector2> 34, 46 </vector2>
+							<string> "type" </string>
+							<string> "animation" </string>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "from" </string>
+							<string> "walk_east" </string>
+							<string> "id" </string>
+							<string> "walk_east" </string>
+							<string> "pos" </string>
+							<vector2> 42, 609 </vector2>
+							<string> "type" </string>
+							<string> "animation" </string>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "id" </string>
+							<string> "walk_scale" </string>
+							<string> "pos" </string>
+							<vector2> 380, 384 </vector2>
+							<string> "scale" </string>
+							<real> 1 </real>
+							<string> "type" </string>
+							<string> "timescale" </string>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "id" </string>
+							<string> "movement_transition" </string>
+							<string> "pos" </string>
+							<vector2> 509, 331 </vector2>
+							<string> "transitions" </string>
+							<array  len="2" shared="false">
+								<dictionary  shared="false">
+									<string> "auto_advance" </string>
+									<bool> False </bool>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "auto_advance" </string>
+									<bool> False </bool>
+								</dictionary>
+							</array>
+							<string> "type" </string>
+							<string> "transition" </string>
+							<string> "xfade" </string>
+							<real> 0 </real>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "id" </string>
+							<string> "walk_transition" </string>
+							<string> "pos" </string>
+							<vector2> 226, 445 </vector2>
+							<string> "transitions" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "auto_advance" </string>
+									<bool> False </bool>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "auto_advance" </string>
+									<bool> False </bool>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "auto_advance" </string>
+									<bool> False </bool>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "auto_advance" </string>
+									<bool> False </bool>
+								</dictionary>
+							</array>
+							<string> "type" </string>
+							<string> "transition" </string>
+							<string> "xfade" </string>
+							<real> 0 </real>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "from" </string>
 							<string> "idle_west" </string>
 							<string> "id" </string>
 							<string> "idle_west" </string>
 							<string> "pos" </string>
 							<vector2> 36, 125 </vector2>
+							<string> "type" </string>
+							<string> "animation" </string>
+						</dictionary>
+						<dictionary  shared="false">
+							<string> "from" </string>
+							<string> "walk_north" </string>
+							<string> "id" </string>
+							<string> "walk_north" </string>
+							<string> "pos" </string>
+							<vector2> 33, 375 </vector2>
 							<string> "type" </string>
 							<string> "animation" </string>
 						</dictionary>
