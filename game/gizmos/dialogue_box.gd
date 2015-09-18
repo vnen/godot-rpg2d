@@ -11,32 +11,49 @@ export(float) var text_wait = 0.1 # Seconds between characters
 export(float) var horizontal_ratio = 0.1 # Panel anchored position ratio
 
 var current_status = STATUS_OFF setget ,get_status
-
 var time_passed = 0
+var dialogue_buffer = []
 
 func get_status():
 	return current_status
+
+func append_dialogue(dialogue):
+	dialogue_buffer.append(dialogue)
 
 func _ready():
 	set_process(true)
 	set_anchor_and_margin( MARGIN_LEFT, ANCHOR_RATIO, horizontal_ratio)
 	set_anchor_and_margin( MARGIN_RIGHT, ANCHOR_RATIO, 1.0 - horizontal_ratio)
+	get_node("dialog_text").set_bbcode("")
 
 func next():
+	var dialog_text = get_node("dialog_text")
 	if(current_status == STATUS_OFF):
-		get_node("dialog_text").set_visible_characters(0)
+		if (dialogue_buffer.size() == 0):
+			return true
+		dialog_text.set_bbcode(dialogue_buffer[0])
+		dialogue_buffer.remove(0)
+		dialog_text.set_visible_characters(0)
 		show()
 		current_status = STATUS_SHOWING
 		time_passed = 0
 		return false
 	elif(current_status == STATUS_SHOWING):
-		get_node("dialog_text").set_visible_characters(-1)
+		dialog_text.set_visible_characters(-1)
 		current_status = STATUS_SHOWN
 		return false
 	else:
-		current_status = STATUS_OFF
-		hide()
-		return true
+		if(dialogue_buffer.size() > 0):
+			dialog_text.set_bbcode(dialogue_buffer[0])
+			dialogue_buffer.remove(0)
+			dialog_text.set_visible_characters(0)
+			current_status = STATUS_SHOWING
+			return false
+		else:
+			dialog_text
+			current_status = STATUS_OFF
+			hide()
+			return true
 
 func _process(delta):
 	if(current_status == STATUS_SHOWING):

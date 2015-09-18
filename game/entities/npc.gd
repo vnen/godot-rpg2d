@@ -82,4 +82,4 @@ func interact(body):
 	update_travel(Vector2(0,0))
 	update()
 
-	interaction.say("Hello " + body.get_name(), get_name())
+	interaction.say(["Hello " + body.get_name()], [get_name()])
