@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="8" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://gizmos/dialogue_box.gd" type="Script" index="1"></ext_resource>
-	<ext_resource path="res://fonts/dialogue.fnt" type="Font" index="6"></ext_resource>
 	<ext_resource path="res://fonts/dialogue_mono.fnt" type="Font" index="2"></ext_resource>
+	<ext_resource path="res://fonts/dialogue.fnt" type="Font" index="6"></ext_resource>
 	<ext_resource path="res://gizmos/dialogue_stylebox.xsbx" type="StyleBox" index="0"></ext_resource>
 	<ext_resource path="res://fonts/dialogue_bold.fnt" type="Font" index="5"></ext_resource>
 	<ext_resource path="res://fonts/dialogue_italic.fnt" type="Font" index="4"></ext_resource>
@@ -14,10 +14,11 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="29">
+			<string_array  len="30">
 				<string> "dialogue" </string>
 				<string> "Panel" </string>
 				<string> "process/pause_mode" </string>
+				<string> "visibility/visible" </string>
 				<string> "anchor/top" </string>
 				<string> "anchor/right" </string>
 				<string> "anchor/bottom" </string>
@@ -48,20 +49,20 @@
 			<string> "node_count" </string>
 			<int> 2 </int>
 			<string> "nodes" </string>
-			<int_array  len="85"> 				-1, -1, 1, 0, -1, 17, 2, 0, 3, 1, 4, 1, 5, 1, 6, 2, 7, 3, 8, 2, 9, 2, 10, 4, 11, 5, 12, 0, 13, 0, 14, 6, 15, 7, 16, 8, 17, 9, 18, 9, 1, 0, 0, 0, 20, 19, -1, 18, 4, 1, 5, 1, 6, 10, 7, 11, 8, 10, 9, 11, 10, 4, 11, 5, 12, 0, 13, 0, 21, 12, 22, 13, 23, 14, 24, 15, 25, 16, 26, 5, 27, 17, 28, 18, 0 </int_array>
+			<int_array  len="87"> 				-1, -1, 1, 0, -1, 18, 2, 0, 3, 1, 4, 2, 5, 2, 6, 2, 7, 3, 8, 4, 9, 3, 10, 3, 11, 1, 12, 5, 13, 0, 14, 0, 15, 6, 16, 7, 17, 8, 18, 9, 19, 9, 1, 0, 0, 0, 21, 20, -1, 18, 5, 2, 6, 2, 7, 10, 8, 11, 9, 10, 10, 11, 11, 1, 12, 5, 13, 0, 14, 0, 22, 12, 23, 13, 24, 14, 25, 15, 26, 16, 27, 5, 28, 17, 29, 18, 0 </int_array>
 			<string> "variants" </string>
 			<array  len="19" shared="false">
 				<int> 2 </int>
+				<bool> False </bool>
 				<int> 1 </int>
 				<real> 30 </real>
 				<real> 130 </real>
-				<bool> False </bool>
 				<bool> True </bool>
 				<resource  external="0">  </resource>
 				<resource  external="1">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -203,7 +204,7 @@
 				<resource  external="4">  </resource>
 				<resource  external="5">  </resource>
 				<resource  external="6">  </resource>
-				<string> "[b]Hey![/b] This is a major text to text the features of the rich text edit. It allows me to test the fonts like [i]italic[/i], [b]bold[/b], [b][i]bold-italic[/i][/b], [code]monospace[/code] and [color=red]color[/color]. I want to test with long lines to see how will it wrap.[b]Hey![/b] This is a major text to text the features of the rich text edit. It allows me to test the fonts like [i]italic[/i], [b]bold[/b], [b][i]bold-italic[/i][/b], [code]monospace[/code] and [color=red]color[/color]. I want to test with long lines to see how will it wrap." </string>
+				<string> "" </string>
 				<int> -1 </int>
 			</array>
 			<string> "version" </string>
