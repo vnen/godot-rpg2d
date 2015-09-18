@@ -16,13 +16,13 @@ func _input(event):
 			tree.set_pause(dialogue_on)
 			tree.set_input_as_handled()
 
-func say(what, who = []):
+func say(what):
 	for box in get_tree().get_nodes_in_group("dialogue"):
 		for i in range(what.size()):
 			var text = ""
-			if(who[i]):
-				text = "[b]" + str(who[i]) + "[/b]: "
-			text += str(what[i])
+			if(what[i].has("author")):
+				text = "[b]" + str(what[i].author) + "[/b]: "
+			text += str(what[i].msg)
 			box.append_dialogue(text)
 		box.next()
 	get_tree().set_pause(true)
