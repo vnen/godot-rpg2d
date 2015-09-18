@@ -63,5 +63,5 @@ func _process(delta):
 			text_box.set_visible_characters( \
 				text_box.get_visible_characters() + 1 \
 			)
-			if(text_box.get_visible_characters() >= text_box.get_bbcode().length()):
+			if(text_box.get_visible_characters() >= text_box.get_total_character_count()):
 				current_status = STATUS_SHOWN
