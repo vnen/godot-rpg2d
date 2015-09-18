@@ -82,4 +82,8 @@ func interact(body):
 	update_travel(Vector2(0,0))
 	update()
 
-	interaction.say("Hello " + body.get_name(), get_name())
+	interaction.say([
+		{ "msg": "Hello " + body.get_name(), "author": get_name() },
+		{ "msg": "Hello " + get_name() + ". How are you?", "author": body.get_name() },
+		{ "msg": "I'm fine, thank you.", "author": get_name() }
+	])
