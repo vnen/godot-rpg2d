@@ -9,14 +9,15 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="10">
-				<string> "Item" </string>
+			<string_array  len="11">
+				<string> "HealthPotion" </string>
 				<string> "Node2D" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "name" </string>
 				<string> "stackable" </string>
 				<string> "max_stack" </string>
+				<string> "health_increase" </string>
 				<string> "image" </string>
 				<string> "Sprite" </string>
 				<string> "texture" </string>
@@ -24,9 +25,9 @@
 			<string> "node_count" </string>
 			<int> 2 </int>
 			<string> "nodes" </string>
-			<int_array  len="26"> 				-1, -1, 1, 0, -1, 5, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 0, 0, 0, 8, 7, -1, 1, 9, 5, 0 </int_array>
+			<int_array  len="28"> 				-1, -1, 1, 0, -1, 6, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 0, 0, 0, 9, 8, -1, 1, 10, 6, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="6" shared="false">
+			<array  len="7" shared="false">
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
@@ -167,6 +168,7 @@
 				<nil>  </nil>
 				<bool> True </bool>
 				<int> -1 </int>
+				<int> 20 </int>
 				<resource  external="1">  </resource>
 			</array>
 			<string> "version" </string>
