@@ -8,7 +8,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="21">
+			<string_array  len="19">
 				<string> "Inventory" </string>
 				<string> "PopupPanel" </string>
 				<string> "visibility/self_opacity" </string>
@@ -25,18 +25,16 @@
 				<string> "popup/exclusive" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "ItemList" </string>
-				<string> "custom_constants/vseparation" </string>
-				<string> "custom_constants/line_separation" </string>
-				<string> "custom_constants/icon_margin" </string>
-				<string> "custom_constants/hseparation" </string>
+				<string> "ItemGrid" </string>
+				<string> "GridContainer" </string>
+				<string> "columns" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 2 </int>
 			<string> "nodes" </string>
-			<int_array  len="70"> 				-1, -1, 1, 0, -1, 14, 2, 0, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 13, 3, 14, 6, 15, 7, 0, 0, 0, 16, 16, -1, 14, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 17, 1, 18, 1, 19, 1, 20, 1, 0 </int_array>
+			<int_array  len="64"> 				-1, -1, 1, 0, -1, 14, 2, 0, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 13, 3, 14, 6, 15, 7, 0, 0, 0, 17, 16, -1, 11, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 18, 8, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="8" shared="false">
+			<array  len="9" shared="false">
 				<real> 0.7 </real>
 				<int> 1 </int>
 				<real> 30 </real>
@@ -46,7 +44,7 @@
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -180,6 +178,7 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
+				<int> 15 </int>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>

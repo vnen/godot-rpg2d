@@ -30,6 +30,7 @@ func _ready():
 	dir.list_dir_end()
 
 func instance(item_name):
+	return ResourceLoader.load(ITEMS_PATH + "/" + item_name + ".xscn").instance()
 	if item_list.has(item_name):
 		return item_list[item_name]
 	if possible_items.find(item_name):

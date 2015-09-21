@@ -1,6 +1,6 @@
 # Item
 
-extends Node2D
+extends Control
 
 # The name of the item
 export (String) var name
