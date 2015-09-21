@@ -34,9 +34,9 @@
 			<string> "node_count" </string>
 			<int> 2 </int>
 			<string> "nodes" </string>
-			<int_array  len="68"> 				-1, -1, 1, 0, -1, 14, 2, 0, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 13, 4, 14, 6, 15, 7, 0, 0, 0, 17, 16, -1, 13, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 18, 1, 19, 1, 20, 8, 0 </int_array>
+			<int_array  len="68"> 				-1, -1, 1, 0, -1, 14, 2, 0, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 13, 4, 14, 6, 15, 7, 0, 0, 0, 17, 16, -1, 13, 3, 1, 4, 1, 5, 8, 6, 8, 7, 8, 8, 8, 9, 3, 10, 4, 11, 5, 12, 5, 18, 1, 19, 1, 20, 9, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="9" shared="false">
+			<array  len="10" shared="false">
 				<real> 0.7 </real>
 				<int> 1 </int>
 				<real> 30 </real>
@@ -46,13 +46,13 @@
 				<resource  external="0">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "ofs" </string>
-							<vector2> -562.503, -336.797 </vector2>
+							<vector2> -146.587, -209.872 </vector2>
 							<string> "snap_grid" </string>
 							<bool> False </bool>
 							<string> "snap_offset" </string>
@@ -72,7 +72,7 @@
 							<string> "snap_step" </string>
 							<vector2> 10, 10 </vector2>
 							<string> "zoom" </string>
-							<real> 0.397214 </real>
+							<real> 0.814506 </real>
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
@@ -180,7 +180,8 @@
 						<int> 0 </int>
 					</dictionary>
 				</dictionary>
-				<int> 15 </int>
+				<real> 5 </real>
+				<int> 8 </int>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
