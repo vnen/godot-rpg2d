@@ -33,6 +33,7 @@ func instance(item_name):
 	if item_list.has(item_name):
 		return item_list[item_name]
 	if possible_items.find(item_name):
-		item_list[item_name] = ResourceLoader.load(ITEMS_PATH + "/" + item_name)
+		print(ITEMS_PATH + "/" + item_name)
+		item_list[item_name] = ResourceLoader.load(ITEMS_PATH + "/" + item_name + ".xscn").instance()
 		return item_list[item_name]
 	return null
