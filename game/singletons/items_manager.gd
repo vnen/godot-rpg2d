@@ -6,15 +6,17 @@
 
 extends Node
 
+const ITEMS_PATH = "res://entities/inventory/items"
+
 # The pool of flyweight items
 var item_list = {}
 
 # The list of possible items to instantiate
-var existing_items = []
+var possible_items = []
 
 func _ready():
 	var dir = Directory.new()
-	dir.open("res://entities/inventory/items")
+	dir.open(ITEMS_PATH)
 	dir.list_dir_begin()
 	var cur_file = true
 
@@ -22,7 +24,15 @@ func _ready():
 		cur_file = dir.get_next()
 		if cur_file == "." or cur_file == ".." or cur_file.extension() != "xscn":
 			continue
-		existing_items.append(cur_file)
+		possible_items.append(cur_file)
 		print(cur_file)
 
 	dir.list_dir_end()
+
+func instance(item_name):
+	if item_list.has(item_name):
+		return item_list[item_name]
+	if possible_items.find(item_name):
+		item_list[item_name] = ResourceLoader.load(ITEMS_PATH + "/" + item_name)
+		return item_list[item_name]
+	return null
