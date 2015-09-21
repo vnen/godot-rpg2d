@@ -8,7 +8,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="19">
+			<string_array  len="21">
 				<string> "Inventory" </string>
 				<string> "PopupPanel" </string>
 				<string> "visibility/self_opacity" </string>
@@ -27,12 +27,14 @@
 				<string> "__meta__" </string>
 				<string> "ItemGrid" </string>
 				<string> "GridContainer" </string>
+				<string> "custom_constants/vseparation" </string>
+				<string> "custom_constants/hseparation" </string>
 				<string> "columns" </string>
 			</string_array>
 			<string> "node_count" </string>
 			<int> 2 </int>
 			<string> "nodes" </string>
-			<int_array  len="64"> 				-1, -1, 1, 0, -1, 14, 2, 0, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 13, 3, 14, 6, 15, 7, 0, 0, 0, 17, 16, -1, 11, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 18, 8, 0 </int_array>
+			<int_array  len="68"> 				-1, -1, 1, 0, -1, 14, 2, 0, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 13, 4, 14, 6, 15, 7, 0, 0, 0, 17, 16, -1, 13, 3, 1, 4, 1, 5, 2, 6, 2, 7, 2, 8, 2, 9, 3, 10, 4, 11, 5, 12, 5, 18, 1, 19, 1, 20, 8, 0 </int_array>
 			<string> "variants" </string>
 			<array  len="9" shared="false">
 				<real> 0.7 </real>
