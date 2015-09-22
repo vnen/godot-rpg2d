@@ -7,8 +7,8 @@
 		<real name="content_margin/top"> 8 </real>
 		<real name="content_margin/bottom"> 4 </real>
 		<resource name="texture" external="0">  </resource>
-		<real name="margin/left"> 40 </real>
-		<real name="margin/right"> 40 </real>
+		<real name="margin/left"> 100 </real>
+		<real name="margin/right"> 100 </real>
 		<real name="margin/top"> 11 </real>
 		<real name="margin/bottom"> 11 </real>
 		<real name="expand_margin/left"> 30 </real>
