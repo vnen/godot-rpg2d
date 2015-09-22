@@ -5,6 +5,7 @@
 		<resource name="default_font"></resource>		<resource name="Panel/styles/panel" external="0">  </resource>
 		<resource name="Panel/styles/panelf" external="0">  </resource>
 		<resource name="Panel/styles/panelnc" external="0">  </resource>
+		<resource name="PopupPanel/styles/panel" external="0">  </resource>
 
 	</main_resource>
 </resource_file>
