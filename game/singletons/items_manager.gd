@@ -22,7 +22,7 @@ func _ready():
 
 	while cur_file:
 		cur_file = dir.get_next()
-		if cur_file == "." or cur_file == ".." or cur_file.extension() != "xscn":
+		if cur_file == "." or cur_file == ".." or cur_file.extension() != "gd":
 			continue
 		possible_items.append(cur_file)
 		print(cur_file)
@@ -35,6 +35,6 @@ func instance(item_name):
 		return item_list[item_name]
 	if possible_items.find(item_name):
 		print(ITEMS_PATH + "/" + item_name)
-		item_list[item_name] = ResourceLoader.load(ITEMS_PATH + "/" + item_name + ".xscn").instance()
+		item_list[item_name] = ResourceLoader.load(ITEMS_PATH + "/" + item_name + ".gd").new()
 		return item_list[item_name]
 	return null
