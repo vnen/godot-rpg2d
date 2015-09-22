@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="Theme" subresource_count="9" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+	<ext_resource path="res://fonts/dialogue_bold_italic.fnt" type="Font" index="2"></ext_resource>
+	<ext_resource path="res://fonts/dialogue.fnt" type="Font" index="5"></ext_resource>
+	<ext_resource path="res://art/ui-theme/panel_box.xsbx" type="StyleBox" index="0"></ext_resource>
+	<ext_resource path="res://fonts/dialogue_italic.fnt" type="Font" index="3"></ext_resource>
+	<ext_resource path="res://fonts/dialogue_mono.fnt" type="Font" index="4"></ext_resource>
+	<ext_resource path="res://fonts/dialogue_bold.fnt" type="Font" index="1"></ext_resource>
+	<resource type="ImageTexture" path="local://1">
+		<int name="flags"> 4 </int>
+		<image name="image" encoding="raw" width="16" height="16" mipmaps="0" format="rgba"> 0000000000000000FFFFFF01FFFFFF03FFFFFF05FFFFFF05FFFFFF07FFFFFF07FFFFFF07FFFFFF07FFFFFF05FFFFFF05FFFFFF03FFFFFF01000000000000000000000000FFFFFF01FFFFFF05FFFFFF0BFFFFFF11FFFFFF15FFFFFF17FFFFFF19FFFFFF19FFFFFF17FFFFFF15FFFFFF11FFFFFF0BFFFFFF05FFFFFF0100000000FFFFFF01FFFFFF05FFFFFF0D868686A8797979EC747474FF747474FF747474FF747474FF747474FF747474FF797979EC868686A8FFFFFF0DFFFFFF05FFFFFF01FFFFFF03FFFFFF0B808080C2646464FFE8E8E813000000000000000000000000000000000000000000000000E8E8E813646464FF808080C2FFFFFF0BFFFFFF03FFFFFF05FFFFFF11757575F7FCFCFC010B0B0B230000000000000000000000000000000000000000000000000B0B0B23FCFCFC01757575F7FFFFFF11FFFFFF05FFFFFF07FFFFFF15747474FF00000000000000000000000000000000000000000000000000000000000000000000000000000000747474FFFFFFFF15FFFFFF07FFFFFF07FFFFFF17747474FF00000000000000000000000000000000000000000000000000000000000000000000000000000000747474FFFFFFFF17FFFFFF07FFFFFF07FFFFFF19747474FF00000000000000000000000000000000000000000000000000000000000000000000000000000000747474FFFFFFFF19FFFFFF07FFFFFF07FFFFFF19747474FF00000000000000000000000000000000000000000000000000000000000000000000000000000000747474FFFFFFFF19FFFFFF07FFFFFF07FFFFFF17747474FF00000000000000000000000000000000000000000000000000000000000000000000000000000000747474FFFFFFFF17FFFFFF07FFFFFF07FFFFFF15747474FF00000000000000000000000000000000000000000000000000000000000000000000000000000000747474FFFFFFFF15FFFFFF07FFFFFF05FFFFFF11757575F6E8E8E8130000000000000000000000000000000000000000000000000000000000000000E8E8E813757575F6FFFFFF11FFFFFF05FFFFFF03FFFFFF0B808080C0646464FFFCFCFC0D000000000000000000000000000000000000000000000000FCFCFC0D646464FF808080C0FFFFFF0BFFFFFF03FFFFFF01FFFFFF05FFFFFF0F808080C2757575F7747474FF747474FF747474FF747474FF747474FF747474FF757575F7808080C2FFFFFF0FFFFFFF05FFFFFF0100000000FFFFFF03FFFFFF05FFFFFF0BFFFFFF11FFFFFF15FFFFFF17FFFFFF19FFFFFF19FFFFFF17FFFFFF15FFFFFF11FFFFFF0BFFFFFF05FFFFFF03000000000000000000000000FFFFFF01FFFFFF03FFFFFF05FFFFFF07FFFFFF07FFFFFF07FFFFFF07FFFFFF07FFFFFF07FFFFFF05FFFFFF03FFFFFF010000000000000000 </image>
+		<vector2 name="size"> 16, 16 </vector2>
+		<int name="storage"> 0 </int>
+		<real name="lossy_quality"> 0.7 </real>
+
+	</resource>
+	<resource type="StyleBoxTexture" path="local://2">
+		<real name="content_margin/left"> 4 </real>
+		<real name="content_margin/right"> 22 </real>
+		<real name="content_margin/top"> 4 </real>
+		<real name="content_margin/bottom"> 5 </real>
+		<resource name="texture" resource_type="Texture" path="local://1">  </resource>
+		<real name="margin/left"> 5 </real>
+		<real name="margin/right"> 5 </real>
+		<real name="margin/top"> 5 </real>
+		<real name="margin/bottom"> 5 </real>
+		<real name="expand_margin/left"> 2 </real>
+		<real name="expand_margin/right"> 2 </real>
+		<real name="expand_margin/top"> 2 </real>
+		<real name="expand_margin/bottom"> 2 </real>
+		<bool name="draw_center"> True </bool>
+
+	</resource>
+	<main_resource>
+		<resource name="default_font"></resource>		<resource name="Panel/styles/panel" external="0">  </resource>
+		<resource name="Panel/styles/panelf" external="0">  </resource>
+		<resource name="Panel/styles/panelnc" external="0">  </resource>
+		<resource name="PopupPanel/styles/panel" external="0">  </resource>
+		<color name="RichTextLabel/colors/default_color"> 0.878431, 0.878431, 0.878431, 1 </color>
+		<color name="RichTextLabel/colors/font_color_selected"> 0.490196, 0.490196, 0.490196, 1 </color>
+		<color name="RichTextLabel/colors/selection_color"> 0.1, 0.1, 1, 0.8 </color>
+		<int name="RichTextLabel/constants/line_separation"> 1 </int>
+		<resource name="RichTextLabel/fonts/bold_font" external="1">  </resource>
+		<resource name="RichTextLabel/fonts/bold_italics_font" external="2">  </resource>
+		<resource name="RichTextLabel/fonts/italics_font" external="3">  </resource>
+		<resource name="RichTextLabel/fonts/mono_font" external="4">  </resource>
+		<resource name="RichTextLabel/fonts/normal_font" external="5">  </resource>
+		<resource name="RichTextLabel/styles/focus" resource_type="StyleBox" path="local://2">  </resource>
+
+	</main_resource>
+</resource_file>
