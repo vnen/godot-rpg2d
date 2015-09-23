@@ -1,11 +1,29 @@
 
 extends Panel
 
-var cursor_offset = Vector2(8, 20)
+var cursor_offset = Vector2(15, 20)
+
+# Current cursor position
+var cursor_position = Vector2(0, 0)
 
 func _ready():
 	var first_pos = get_node("ItemGrid/SingleItem").get_global_pos()
 	get_node("Cursor").set_global_pos(first_pos + cursor_offset)
+	set_process_input(true)
+
+func _input(event):
+	if(event.is_action("ui_right") and event.is_pressed()):
+		move_cursor_right()
+		get_tree().set_input_as_handled()
+	if(event.is_action("ui_left") and event.is_pressed()):
+		move_cursor_left()
+		get_tree().set_input_as_handled()
+	if(event.is_action("ui_down") and event.is_pressed()):
+		move_cursor_down()
+		get_tree().set_input_as_handled()
+	if(event.is_action("ui_up") and event.is_pressed()):
+		move_cursor_up()
+		get_tree().set_input_as_handled()
 
 # Set an item in a certain point in the grid
 func set_item(idx, item, amount):
@@ -46,9 +64,35 @@ func move_item(idx_from, idx_to):
 	from.item_image = old_texture
 	from.item_amount = old_amount
 
+# Move the cursor to the right
+func move_cursor_right():
+	cursor_position.x = clamp(cursor_position.x + 1, 0, 8)
+	update_cursor()
+# Move the cursor to the left
+func move_cursor_left():
+	cursor_position.x = clamp(cursor_position.x - 1, 0, 8)
+	update_cursor()
+# Move the cursor down
+func move_cursor_down():
+	cursor_position.y = clamp(cursor_position.y + 1, 0, 4)
+	update_cursor()
+# Move the cursor up
+func move_cursor_up():
+	cursor_position.y = clamp(cursor_position.y - 1, 0, 4)
+	update_cursor()
+# Update cursor position
+func update_cursor():
+	var cur_pos = get_node("ItemGrid/SingleItem" + \
+			_normalize_index(_idx_from_position(cursor_position)) \
+		).get_global_pos()
+	get_node("Cursor").set_global_pos(cur_pos + cursor_offset)
+
 func _normalize_index(idx):
-	assert(idx < 0 or idx > 44)
+	assert(idx >= 0 and idx < 45)
 	var normal_idx = str(idx)
 	if idx <= 0:
 		normal_idx = ""
 	return normal_idx
+
+func _idx_from_position(pos):
+	return ( 9 * int(pos.y) ) + (int(pos.x) % 9)
