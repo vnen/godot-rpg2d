@@ -5,6 +5,7 @@ export (int) var health_increase = 20
 
 func _init():
 	texture = ResourceLoader.load("res://art/rpg-icons/small_potion.png")
+	name = "Small Potion"
 
 func effect(player):
 	player.HP += health_increase

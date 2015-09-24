@@ -32,3 +32,4 @@ func get_amount():
 func _ready():
 	set_amount(item_amount)
 	get_node("ItemImage").set_texture(item_image)
+	item = ResourceLoader.load("res://entities/inventory/items/small_potion.gd").new()

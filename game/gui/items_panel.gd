@@ -24,6 +24,9 @@ func _input(event):
 	if(event.is_action("menu_up") and event.is_pressed()):
 		move_cursor_up()
 		get_tree().set_input_as_handled()
+	if(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
+		select()
+		get_tree().set_input_as_handled()
 
 # Set an item in a certain point in the grid
 func set_item(idx, item, amount):
@@ -91,7 +94,7 @@ func update_cursor():
 
 # Select the item under cursor
 func select():
-	OS.alert("Selected item ")
+	OS.alert("Selected item " + _get_pointed_node().item.name)
 	pass
 
 func _normalize_index(idx):
