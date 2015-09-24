@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://gui/gear_menu.gd" type="Script" index="1"></ext_resource>
-	<ext_resource path="res://art/ui-theme/ui_theme.xthm" type="Theme" index="0"></ext_resource>
 	<ext_resource path="res://gui/item_actions.xscn" type="PackedScene" index="3"></ext_resource>
+	<ext_resource path="res://art/ui-theme/ui_theme.xthm" type="Theme" index="0"></ext_resource>
 	<ext_resource path="res://gui/items_panel.xscn" type="PackedScene" index="2"></ext_resource>
+	<ext_resource path="res://gui/gear_menu.gd" type="Script" index="1"></ext_resource>
 	<resource type="StyleBoxFlat" path="local://1">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>
@@ -76,7 +76,7 @@
 				<resource  external="1">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
