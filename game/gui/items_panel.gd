@@ -59,15 +59,12 @@ func move_item(idx_from, idx_to):
 	var from = get_node("ItemGrid/SingleItem" + _normalize_index(idx_from))
 	var to = get_node("ItemGrid/SingleItem" + _normalize_index(idx_to))
 
-	var old_texture = to.item_image
 	var old_amount = to.item_amount
 	var old_item = to.item
 
-	to.item_image = from.item_image
 	to.item_amount = from.item_amount
 	to.item = from.item
 
-	from.item_image = old_texture
 	from.item_amount = old_amount
 	from.item = old_item
 

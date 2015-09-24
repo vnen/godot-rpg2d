@@ -7,6 +7,10 @@ export (Texture) var item_image = null
 var item = null setget set_item,get_item
 
 func set_item(v):
+	if item:
+		item_image = item.texture
+	else:
+		item_image = null
 	item = v
 func get_item():
 	return item
