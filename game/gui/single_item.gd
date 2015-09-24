@@ -4,6 +4,13 @@ extends Control
 export (int, 0, 99) var item_amount = 1 setget set_amount,get_amount
 export (Texture) var item_image = null
 
+var item = null setget set_item,get_item
+
+func set_item(v):
+	item = v
+func get_item():
+	return item
+
 func set_amount(value):
 	item_amount = clamp( float(value), 0, 99 )
 	if !is_inside_tree():

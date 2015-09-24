@@ -12,16 +12,16 @@ func _ready():
 	set_process_input(true)
 
 func _input(event):
-	if(event.is_action("ui_right") and event.is_pressed()):
+	if(event.is_action("menu_right") and event.is_pressed()):
 		move_cursor_right()
 		get_tree().set_input_as_handled()
-	if(event.is_action("ui_left") and event.is_pressed()):
+	if(event.is_action("menu_left") and event.is_pressed()):
 		move_cursor_left()
 		get_tree().set_input_as_handled()
-	if(event.is_action("ui_down") and event.is_pressed()):
+	if(event.is_action("menu_down") and event.is_pressed()):
 		move_cursor_down()
 		get_tree().set_input_as_handled()
-	if(event.is_action("ui_up") and event.is_pressed()):
+	if(event.is_action("menu_up") and event.is_pressed()):
 		move_cursor_up()
 		get_tree().set_input_as_handled()
 
@@ -30,6 +30,7 @@ func set_item(idx, item, amount):
 	var item_node = get_node("ItemGrid/SingleItem" + _normalize_index(idx))
 	item_node.item_image = item.texture
 	item_node.item_amount = amount
+	item_node.item = item
 	return true
 
 # Set an item amount
@@ -57,12 +58,15 @@ func move_item(idx_from, idx_to):
 
 	var old_texture = to.item_image
 	var old_amount = to.item_amount
+	var old_item = to.item
 
 	to.item_image = from.item_image
 	to.item_amount = from.item_amount
+	to.item = from.item
 
 	from.item_image = old_texture
 	from.item_amount = old_amount
+	from.item = old_item
 
 # Move the cursor to the right
 func move_cursor_right():
@@ -82,10 +86,13 @@ func move_cursor_up():
 	update_cursor()
 # Update cursor position
 func update_cursor():
-	var cur_pos = get_node("ItemGrid/SingleItem" + \
-			_normalize_index(_idx_from_position(cursor_position)) \
-		).get_global_pos()
+	var cur_pos = _get_pointed_node().get_global_pos()
 	get_node("Cursor").set_global_pos(cur_pos + cursor_offset)
+
+# Select the item under cursor
+func select():
+	OS.alert("Selected item ")
+	pass
 
 func _normalize_index(idx):
 	assert(idx >= 0 and idx < 45)
@@ -96,3 +103,8 @@ func _normalize_index(idx):
 
 func _idx_from_position(pos):
 	return ( 9 * int(pos.y) ) + (int(pos.x) % 9)
+
+func _get_pointed_node():
+	return get_node("ItemGrid/SingleItem" + \
+			_normalize_index(_idx_from_position(cursor_position)) \
+		)
