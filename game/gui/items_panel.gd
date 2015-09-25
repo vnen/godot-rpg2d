@@ -90,7 +90,7 @@ func update_cursor():
 
 # Select the item under cursor
 func select():
-	get_node("../ItemActionsPanel").show()
+	get_node("ItemActionsPanel").show()
 
 func _normalize_index(idx):
 	assert(idx >= 0 and idx < 45)
