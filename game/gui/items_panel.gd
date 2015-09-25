@@ -1,6 +1,8 @@
 
 extends Panel
 
+export (NodePath) var cursor = null
+
 var cursor_offset = Vector2(15, 20)
 
 # Current cursor position
@@ -8,25 +10,21 @@ var cursor_position = Vector2(0, 0)
 
 func _ready():
 	var first_pos = get_node("ItemGrid/SingleItem").get_global_pos()
-	get_node("Cursor").set_global_pos(first_pos + cursor_offset)
-	set_process_input(true)
+	if cursor:
+		get_node(cursor).set_global_pos(first_pos + cursor_offset)
+	set_process_input(false) # It'll receive input from parent control
 
 func _input(event):
 	if(event.is_action("menu_right") and event.is_pressed()):
 		move_cursor_right()
-		get_tree().set_input_as_handled()
 	if(event.is_action("menu_left") and event.is_pressed()):
 		move_cursor_left()
-		get_tree().set_input_as_handled()
 	if(event.is_action("menu_down") and event.is_pressed()):
 		move_cursor_down()
-		get_tree().set_input_as_handled()
 	if(event.is_action("menu_up") and event.is_pressed()):
 		move_cursor_up()
-		get_tree().set_input_as_handled()
 	if(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
 		select()
-		get_tree().set_input_as_handled()
 
 # Set an item in a certain point in the grid
 func set_item(idx, item, amount):
@@ -86,8 +84,9 @@ func move_cursor_up():
 	update_cursor()
 # Update cursor position
 func update_cursor():
-	var cur_pos = _get_pointed_node().get_global_pos()
-	get_node("Cursor").set_global_pos(cur_pos + cursor_offset)
+	if(cursor):
+		var cur_pos = _get_pointed_node().get_global_pos()
+		get_node(cursor).set_global_pos(cur_pos + cursor_offset)
 
 # Select the item under cursor
 func select():
