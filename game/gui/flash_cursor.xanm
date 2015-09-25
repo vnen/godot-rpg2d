@@ -5,6 +5,23 @@
 		<real name="length"> 0.8 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Cursor:transform/scale" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "times" </string>
+			<real_array  len="3"> 				0, 0.4, 0.750371 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="3"> 				1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="3" shared="false">
+				<vector2> 1, 1 </vector2>
+				<vector2> 1.2, 1.2 </vector2>
+				<vector2> 1, 1 </vector2>
+			</array>
+		</dictionary>
 
 	</main_resource>
 </resource_file>

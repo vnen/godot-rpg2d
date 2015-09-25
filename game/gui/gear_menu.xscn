@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
+<resource_file type="PackedScene" subresource_count="8" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
 	<ext_resource path="res://gui/gear_menu.gd" type="Script" index="1"></ext_resource>
 	<ext_resource path="res://art/ui-theme/ui_theme.xthm" type="Theme" index="0"></ext_resource>
+	<ext_resource path="res://gui/flash_cursor.xanm" type="Animation" index="5"></ext_resource>
 	<ext_resource path="res://gui/item_actions.xscn" type="PackedScene" index="3"></ext_resource>
+	<ext_resource path="res://art/ui-elements-lpc/expansion/mouse_pointer.png" type="Texture" index="4"></ext_resource>
 	<ext_resource path="res://gui/items_panel.xscn" type="PackedScene" index="2"></ext_resource>
 	<resource type="StyleBoxFlat" path="local://1">
 		<real name="content_margin/left"> -1 </real>
@@ -24,7 +26,7 @@
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 			<string> "names" </string>
-			<string_array  len="35">
+			<string_array  len="51">
 				<string> "GearMenu" </string>
 				<string> "PopupPanel" </string>
 				<string> "anchor/right" </string>
@@ -59,14 +61,30 @@
 				<string> "JoyHintPanel" </string>
 				<string> "ItemsPanel" </string>
 				<string> "_import_path" </string>
+				<string> "cursor" </string>
 				<string> "ItemActionsPanel" </string>
+				<string> "Cursor" </string>
+				<string> "Sprite" </string>
+				<string> "transform/scale" </string>
+				<string> "texture" </string>
+				<string> "centered" </string>
+				<string> "anim" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/flash_cursor" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 11 </int>
+			<int> 13 </int>
 			<string> "nodes" </string>
-			<int_array  len="277"> 				-1, -1, 1, 0, -1, 15, 2, 0, 3, 0, 4, 1, 5, 1, 6, 1, 7, 1, 8, 2, 9, 2, 10, 3, 11, 3, 12, 4, 13, 5, 14, 2, 15, 6, 16, 7, 0, 0, 0, 18, 17, -1, 7, 2, 0, 3, 0, 8, 8, 9, 2, 10, 3, 11, 3, 16, 9, 0, 1, 0, 20, 19, -1, 7, 6, 10, 7, 11, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 1, 0, 20, 21, -1, 9, 3, 0, 5, 11, 6, 10, 7, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 1, 0, 20, 22, -1, 9, 23, 0, 2, 0, 3, 0, 5, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 4, 0, 25, 24, -1, 14, 2, 0, 3, 0, 4, 13, 5, 14, 6, 13, 7, 15, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 26, 2, 27, 16, 28, 17, 0, 1, 0, 20, 29, -1, 9, 30, 0, 2, 0, 4, 18, 7, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 6, 0, 25, 25, -1, 14, 2, 0, 3, 0, 4, 13, 5, 14, 6, 13, 7, 15, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 26, 2, 27, 19, 28, 17, 0, 1, 0, 20, 31, -1, 12, 30, 0, 23, 0, 2, 0, 3, 0, 4, 18, 5, 20, 7, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 1, 0, 20, 32, 21, 2, 33, 22, 16, 23, 0, 1, 0, 20, 34, 24, 2, 33, 22, 16, 25, 0 </int_array>
+			<int_array  len="315"> 				-1, -1, 1, 0, -1, 15, 2, 0, 3, 0, 4, 1, 5, 1, 6, 1, 7, 1, 8, 2, 9, 2, 10, 3, 11, 3, 12, 4, 13, 5, 14, 2, 15, 6, 16, 7, 0, 0, 0, 18, 17, -1, 7, 2, 0, 3, 0, 8, 8, 9, 2, 10, 3, 11, 3, 16, 9, 0, 1, 0, 20, 19, -1, 7, 6, 10, 7, 11, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 1, 0, 20, 21, -1, 9, 3, 0, 5, 11, 6, 10, 7, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 1, 0, 20, 22, -1, 9, 23, 0, 2, 0, 3, 0, 5, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 4, 0, 25, 24, -1, 14, 2, 0, 3, 0, 4, 13, 5, 14, 6, 13, 7, 15, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 26, 2, 27, 16, 28, 17, 0, 1, 0, 20, 29, -1, 9, 30, 0, 2, 0, 4, 18, 7, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 6, 0, 25, 25, -1, 14, 2, 0, 3, 0, 4, 13, 5, 14, 6, 13, 7, 15, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 26, 2, 27, 19, 28, 17, 0, 1, 0, 20, 31, -1, 12, 30, 0, 23, 0, 2, 0, 3, 0, 4, 18, 5, 20, 7, 12, 8, 8, 9, 2, 10, 0, 11, 0, 12, 4, 0, 1, 0, 20, 32, 21, 3, 33, 22, 16, 23, 34, 24, 0, 1, 0, 20, 35, 25, 2, 33, 22, 16, 26, 0, 0, 0, 37, 36, -1, 3, 38, 27, 39, 28, 40, 8, 0, 0, 0, 42, 41, -1, 8, 43, 0, 44, 29, 45, 30, 46, 31, 47, 2, 48, 32, 49, 33, 50, 34, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="26" shared="false">
+			<array  len="35" shared="false">
 				<int> 1 </int>
 				<real> 10 </real>
 				<bool> True </bool>
@@ -76,7 +94,7 @@
 				<resource  external="1">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -498,11 +516,21 @@
 					<string> "_edit_lock_" </string>
 					<bool> True </bool>
 				</dictionary>
+				<node_path> "../../Cursor" </node_path>
 				<resource  external="3">  </resource>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
+				<vector2> 1.1325, 1.1325 </vector2>
+				<resource  external="4">  </resource>
+				<real> 0 </real>
+				<node_path> ".." </node_path>
+				<resource  external="5">  </resource>
+				<real> 1 </real>
+				<array  len="0" shared="false">
+				</array>
+				<string> "flash_cursor" </string>
 			</array>
 			<string> "version" </string>
 			<int> 1 </int>
