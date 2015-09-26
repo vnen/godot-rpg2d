@@ -6,8 +6,6 @@ const NOTIFICATION_ACTION_SELECTED = 500
 # Color for disabled labels
 export (Color) var disabled_color = Color("393939")
 export (Color) var enabled_color  = Color("FFFFFF")
-# Cursor nodepath
-export (NodePath) var cursor = null;
 
 var actions = {}
 # Current item for actions
@@ -56,9 +54,9 @@ func select():
 	hide()
 
 func update_cursor():
-	if cursor:
-		get_node(cursor) \
-			.set_global_pos(_get_pointed_node().get_global_pos())
+	for cursor in get_tree().get_nodes_in_group("cursor"):
+		cursor.set_global_pos(\
+			_get_pointed_node().get_global_pos())
 
 func _get_pointed_node():
 	return get_node("ActionList").get_child(cursor_index)

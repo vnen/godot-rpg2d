@@ -1,19 +1,13 @@
 
 extends Panel
 
-export (NodePath) var cursor = null
-
 var cursor_offset = Vector2(15, 20)
 
 # Current cursor position
 var cursor_position = Vector2(0, 0)
 
 func _ready():
-	var first_pos = get_node("ItemGrid/SingleItem").get_global_pos()
-	if cursor:
-		var cursor_node = get_node(cursor)
-		cursor_node.set_global_pos(first_pos + cursor_offset)
-		get_node("ItemActionsPanel").cursor = cursor_node.get_path()
+	update_cursor()
 	set_process_input(false) # It'll receive input from parent control
 
 func action_selected(action, item):
@@ -94,9 +88,9 @@ func move_cursor_up():
 	update_cursor()
 # Update cursor position
 func update_cursor():
-	if(cursor):
+	for cursor in get_tree().get_nodes_in_group("cursor"):
 		var cur_pos = _get_pointed_node().get_global_pos()
-		get_node(cursor).set_global_pos(cur_pos + cursor_offset)
+		cursor.set_global_pos(cur_pos + cursor_offset)
 
 # Select the item under cursor
 func select():
