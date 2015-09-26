@@ -11,10 +11,20 @@ var cursor_position = Vector2(0, 0)
 func _ready():
 	var first_pos = get_node("ItemGrid/SingleItem").get_global_pos()
 	if cursor:
-		get_node(cursor).set_global_pos(first_pos + cursor_offset)
+		var cursor_node = get_node(cursor)
+		cursor_node.set_global_pos(first_pos + cursor_offset)
+		get_node("ItemActionsPanel").cursor = cursor_node.get_path()
 	set_process_input(false) # It'll receive input from parent control
 
+func action_selected(action, item):
+	update_cursor()
+
 func _input(event):
+	var actionsPanel = get_node("ItemActionsPanel")
+	# Pass the event down the chain
+	if(actionsPanel.is_visible()):
+		actionsPanel._input(event)
+		return
 	if(event.is_action("menu_right") and event.is_pressed()):
 		move_cursor_right()
 	if(event.is_action("menu_left") and event.is_pressed()):
@@ -107,5 +117,5 @@ func _idx_from_position(pos):
 
 func _get_pointed_node():
 	return get_node("ItemGrid/SingleItem" + \
-			_normalize_index(_idx_from_position(cursor_position)) \
+		_normalize_index(_idx_from_position(cursor_position)) \
 		)
