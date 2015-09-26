@@ -12,6 +12,8 @@ var actions = {}
 var item = null
 # Cursor position in list
 var cursor_index = 0
+# Offset between cursor and node position
+var cursor_offset = Vector2(0, 8)
 
 func set_item(item):
 	self.item = item
@@ -56,7 +58,7 @@ func select():
 func update_cursor():
 	for cursor in get_tree().get_nodes_in_group("cursor"):
 		cursor.set_global_pos(\
-			_get_pointed_node().get_global_pos())
+			_get_pointed_node().get_global_pos() + cursor_offset)
 
 func _get_pointed_node():
 	return get_node("ActionList").get_child(cursor_index)
