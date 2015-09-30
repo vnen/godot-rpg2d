@@ -9,9 +9,7 @@ var cursor_position = Vector2(0, 0)
 func _ready():
 	update_cursor()
 	set_process_input(false) # It'll receive input from parent control
-
-func action_selected(action, item):
-	update_cursor()
+	get_node("ItemActionsPanel").connect("action_selected", self, "action_selected")
 
 func _input(event):
 	var actionsPanel = get_node("ItemActionsPanel")
@@ -29,6 +27,10 @@ func _input(event):
 		move_cursor_up()
 	if(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
 		select()
+
+func action_selected(action, item):
+	print("Doing ", action, " with ", item.name)
+	update_cursor()
 
 # Set an item in a certain point in the grid
 func set_item(idx, item, amount):
