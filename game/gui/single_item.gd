@@ -6,14 +6,25 @@ export (Texture) var item_image = null
 
 var item = null setget set_item,get_item
 
+var ready = false
+
 func set_item(v):
 	if item:
 		item_image = item.texture
 	else:
 		item_image = null
 	item = v
+	if(ready):
+		get_node("ItemImage").set_texture(item_image)
 func get_item():
 	return item
+
+func disable():
+	set_item(null)
+	set_amount(0)
+
+func is_enabled():
+	return item != null
 
 func set_amount(value):
 	item_amount = clamp( float(value), 0, 99 )
@@ -37,3 +48,4 @@ func _ready():
 	set_amount(item_amount)
 	get_node("ItemImage").set_texture(item_image)
 	item = ResourceLoader.load("res://entities/inventory/items/small_potion.gd").new()
+	ready = true

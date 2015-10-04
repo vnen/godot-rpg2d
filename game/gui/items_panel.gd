@@ -17,6 +17,13 @@ var cursor_position = Vector2(0, 0)
 func _ready():
 	set_process_input(false) # It'll receive input from parent control
 	get_node("ItemActionsPanel").connect("action_selected", self, "action_selected")
+	
+	# This is for testing, can be slow
+	for i in range(10):
+		var idx = randi() % 45
+		while(!_get_item_node(idx).is_enabled()):
+			idx = randi() % 45
+		_get_item_node(idx).disable();
 
 func _input(event):
 	var actionsPanel = get_node("ItemActionsPanel")
@@ -41,21 +48,25 @@ func action_selected(action, item):
 
 # Set an item in a certain point in the grid
 func set_item(idx, item, amount):
-	var item_node = get_node("ItemGrid/SingleItem" + _normalize_index(idx))
-	item_node.item_image = item.texture
+	var item_node = _get_item_node(idx)
 	item_node.item_amount = amount
 	item_node.item = item
 	return true
 
+# Remove an item from the panel
+func remove_item(idx):
+	var item_node = _get_item_node(idx)
+	item_node.disable()
+
 # Set an item amount
 func set_item_amount(idx, amount):
-	var item_node = get_node("ItemGrid/SingleItem" + _normalize_index(idx))
+	var item_node = _get_item_node(idx)
 	item_node.item_amount = amount
 	return true
 
 # Get an item amount
 func get_item_amount(idx):
-	return get_node("ItemGrid/SingleItem" + _normalize_index(idx)).item_amount
+	return _get_item_node(idx).item_amount
 
 # Increase the amount by one
 func increment_amount(idx):
@@ -67,8 +78,8 @@ func decrement_amount(idx):
 
 # Move an item with replace
 func move_item(idx_from, idx_to):
-	var from = get_node("ItemGrid/SingleItem" + _normalize_index(idx_from))
-	var to = get_node("ItemGrid/SingleItem" + _normalize_index(idx_to))
+	var from = _get_item_node(idx_from)
+	var to = _get_item_node_normalize_index(idx_to)
 
 	var old_amount = to.item_amount
 	var old_item = to.item
@@ -119,6 +130,7 @@ func _idx_from_position(pos):
 	return ( 9 * int(pos.y) ) + (int(pos.x) % 9)
 
 func _get_pointed_node():
-	return get_node("ItemGrid/SingleItem" + \
-		_normalize_index(_idx_from_position(cursor_position)) \
-		)
+	return _get_item_node(_idx_from_position(cursor_position))
+
+func _get_item_node(idx):
+	return get_node("ItemGrid/SingleItem" + _normalize_index(idx))
