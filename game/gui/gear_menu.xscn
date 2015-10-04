@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="7" version="2.0" version_name="Godot Engine v2.0.alpha.custom_build">
-	<ext_resource path="res://gui/gear_menu.gd" type="Script" index="1"></ext_resource>
 	<ext_resource path="res://art/ui-elements-lpc/expansion/mouse_pointer.png" type="Texture" index="3"></ext_resource>
-	<ext_resource path="res://art/ui-theme/ui_theme.xthm" type="Theme" index="0"></ext_resource>
-	<ext_resource path="res://gui/flash_cursor.xanm" type="Animation" index="4"></ext_resource>
 	<ext_resource path="res://gui/items_panel.xscn" type="PackedScene" index="2"></ext_resource>
+	<ext_resource path="res://art/ui-theme/ui_theme.xthm" type="Theme" index="0"></ext_resource>
+	<ext_resource path="res://gui/gear_menu.gd" type="Script" index="1"></ext_resource>
+	<ext_resource path="res://gui/flash_cursor.xanm" type="Animation" index="4"></ext_resource>
 	<resource type="StyleBoxFlat" path="local://1">
 		<real name="content_margin/left"> -1 </real>
 		<real name="content_margin/right"> -1 </real>

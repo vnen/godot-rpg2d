@@ -13,6 +13,8 @@ var actions = {}
 var action_keys = []
 # Current item for actions
 var item = null
+# Cursor object
+export (Object) var cursor = null
 # Cursor position in list
 var cursor_index = 0
 # Offset between cursor and node position
@@ -73,9 +75,8 @@ func select():
 	hide()
 
 func update_cursor():
-	for cursor in get_tree().get_nodes_in_group("cursor"):
-		cursor.set_global_pos(\
-			_get_pointed_node().get_global_pos() + cursor_offset)
+	cursor.set_global_pos(\
+		_get_pointed_node().get_global_pos() + cursor_offset)
 
 func _get_pointed_node():
 	return get_node("ActionList").get_child(cursor_index)

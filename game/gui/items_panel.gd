@@ -3,11 +3,18 @@ extends Panel
 
 var cursor_offset = Vector2(15, 20)
 
+# Cursor object
+var cursor = null setget set_cursor
+
+func set_cursor(cur):
+	cursor = cur
+	get_node("ItemActionsPanel").cursor = cursor
+	update_cursor()
+	
 # Current cursor position
 var cursor_position = Vector2(0, 0)
 
 func _ready():
-	update_cursor()
 	set_process_input(false) # It'll receive input from parent control
 	get_node("ItemActionsPanel").connect("action_selected", self, "action_selected")
 
@@ -88,11 +95,11 @@ func move_cursor_down():
 func move_cursor_up():
 	cursor_position.y = clamp(cursor_position.y - 1, 0, 4)
 	update_cursor()
+
 # Update cursor position
 func update_cursor():
-	for cursor in get_tree().get_nodes_in_group("cursor"):
-		var cur_pos = _get_pointed_node().get_global_pos()
-		cursor.set_global_pos(cur_pos + cursor_offset)
+	var cur_pos = _get_pointed_node().get_global_pos()
+	cursor.set_global_pos(cur_pos + cursor_offset)
 
 # Select the item under cursor
 func select():

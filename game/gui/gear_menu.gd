@@ -5,6 +5,7 @@ var menu_actions = ["menu_up","menu_down","menu_left","menu_right","menu_select"
 
 func _ready():
 	popup()
+	get_node("InventoryMenu/ItemsPanel").cursor = get_node("Cursor")
 	set_process_input(true)
 
 func _input(event):
