@@ -48,7 +48,8 @@ func _ready():
 
 func _on_visibility_change():
 	if(is_visible()):
-		update_cursor()
+		call_deferred("update_cursor")
+		pass
 
 func enable_action(action):
 	assert(actions.has(action))
