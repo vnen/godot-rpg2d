@@ -6,6 +6,8 @@ var cursor_offset = Vector2(15, 20)
 # Cursor object
 var cursor = null setget set_cursor
 
+var grid_size = {}
+
 func set_cursor(cur):
 	cursor = cur
 	get_node("ItemActionsPanel").cursor = cursor
@@ -17,9 +19,11 @@ var cursor_position = Vector2(0, 0)
 func _ready():
 	set_process_input(false) # It'll receive input from parent control
 	get_node("ItemActionsPanel").connect("action_selected", self, "action_selected")
+	grid_size["x"] = get_node("ItemGrid").get_columns()
+	grid_size["y"] = 5
 	
 	# This is for testing, can be slow
-	for i in range(10):
+	for i in range(20):
 		var idx = randi() % 45
 		while(!_get_item_node(idx).is_enabled()):
 			idx = randi() % 45
@@ -32,13 +36,13 @@ func _input(event):
 		actionsPanel._input(event)
 		return
 	if(event.is_action("menu_right") and event.is_pressed()):
-		move_cursor_right()
+		_move_cursor("x", 1)
 	if(event.is_action("menu_left") and event.is_pressed()):
-		move_cursor_left()
+		_move_cursor("x", -1)
 	if(event.is_action("menu_down") and event.is_pressed()):
-		move_cursor_down()
+		_move_cursor("y", 1)
 	if(event.is_action("menu_up") and event.is_pressed()):
-		move_cursor_up()
+		_move_cursor("y", -1)
 	if(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
 		select()
 
@@ -90,22 +94,24 @@ func move_item(idx_from, idx_to):
 	from.item_amount = old_amount
 	from.item = old_item
 
-# Move the cursor to the right
-func move_cursor_right():
-	cursor_position.x = clamp(cursor_position.x + 1, 0, 8)
-	update_cursor()
-# Move the cursor to the left
-func move_cursor_left():
-	cursor_position.x = clamp(cursor_position.x - 1, 0, 8)
-	update_cursor()
-# Move the cursor down
-func move_cursor_down():
-	cursor_position.y = clamp(cursor_position.y + 1, 0, 4)
-	update_cursor()
-# Move the cursor up
-func move_cursor_up():
-	cursor_position.y = clamp(cursor_position.y - 1, 0, 4)
-	update_cursor()
+# Move the cursor in direction (x or y) by jump slots
+func _move_cursor(dir, jump):
+	var old_pos = cursor_position
+	cursor_position[dir] = cursor_position[dir] + jump
+	
+	while cursor_position[dir] >= 0 and cursor_position[dir] < grid_size[dir] :
+		var item_node = _get_item_node(_idx_from_position(cursor_position))
+		if item_node.is_enabled():
+			update_cursor()
+			return
+		cursor_position[dir] = cursor_position[dir] + jump
+	
+	cursor_position[dir] = int(clamp(cursor_position[dir], 0, grid_size[dir] - 1))
+	var item_node = _get_item_node(_idx_from_position(cursor_position))
+	if !item_node.is_enabled():
+		cursor_position = old_pos
+	else:
+		update_cursor()
 
 # Update cursor position
 func update_cursor():
