@@ -4,9 +4,9 @@ extends PopupPanel
 var menu_actions = ["menu_up","menu_down","menu_left","menu_right","menu_select"]
 
 func _ready():
-	popup()
 	get_node("InventoryMenu/ItemsPanel").cursor = get_node("Cursor")
 	set_process_input(true)
+	call_deferred("popup")
 
 func _input(event):
 	for action in menu_actions:
