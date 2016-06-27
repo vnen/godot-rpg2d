@@ -1,6 +1,6 @@
 # Item Manager
 
-# This singleton is responsible for managing the creation and 
+# This singleton is responsible for managing the creation and
 # destruction of items. It's intended to keep everything lightweight
 # even when there's a lot of items.
 
@@ -30,7 +30,7 @@ func _ready():
 	dir.list_dir_end()
 
 func instance(item_name):
-	return ResourceLoader.load(ITEMS_PATH + "/" + item_name + ".xscn").instance()
+#	return ResourceLoader.load(ITEMS_PATH + "/" + item_name + ".tscn").instance()
 	if item_list.has(item_name):
 		return item_list[item_name]
 	if possible_items.find(item_name):

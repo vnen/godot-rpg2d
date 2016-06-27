@@ -6,28 +6,27 @@ var cursor_offset = Vector2(15, 20)
 # Cursor object
 var cursor = null setget set_cursor
 
-var grid_size = {}
+var grid_size = Vector2()
+var last_index = -1
 
 func set_cursor(cur):
 	cursor = cur
 	get_node("ItemActionsPanel").cursor = cursor
 	update_cursor()
-	
+
 # Current cursor position
 var cursor_position = Vector2(0, 0)
 
 func _ready():
 	set_process_input(false) # It'll receive input from parent control
 	get_node("ItemActionsPanel").connect("action_selected", self, "action_selected")
-	grid_size["x"] = get_node("ItemGrid").get_columns()
-	grid_size["y"] = 5
-	
-	# This is for testing, can be slow
-	for i in range(20):
-		var idx = randi() % 45
-		while(!_get_item_node(idx).is_enabled()):
-			idx = randi() % 45
-		_get_item_node(idx).disable();
+	grid_size.x = get_node("ItemGrid").get_columns()
+	grid_size.y = 5
+
+	var item = items_manager.instance("small_potion")
+	randomize()
+	for i in range(16):
+		add_item(item, randi() % 10 + 1)
 
 func _input(event):
 	var actionsPanel = get_node("ItemActionsPanel")
@@ -57,10 +56,23 @@ func set_item(idx, item, amount):
 	item_node.item = item
 	return true
 
+# Add a new item to the inventory
+# Returns the item index
+func add_item(item, amount=1):
+	last_index += 1
+	set_item(last_index, item, amount)
+
 # Remove an item from the panel
 func remove_item(idx):
-	var item_node = _get_item_node(idx)
-	item_node.disable()
+	assert(idx >= 0 and idx <= last_index)
+	for i in range(idx, last_index):
+		var next = _get_item_node(i + 1)
+		set_item(i, next.item, next.item_amount)
+	_get_item_node(last_index).disable()
+	last_index -= 1
+	if _idx_from_position(cursor_position) >= idx:
+		cursor_position = _position_from_idx(_idx_from_position(cursor_position) - 1)
+		update_cursor()
 
 # Set an item amount
 func set_item_amount(idx, amount):
@@ -98,14 +110,14 @@ func move_item(idx_from, idx_to):
 func _move_cursor(dir, jump):
 	var old_pos = cursor_position
 	cursor_position[dir] = cursor_position[dir] + jump
-	
+
 	while cursor_position[dir] >= 0 and cursor_position[dir] < grid_size[dir] :
 		var item_node = _get_item_node(_idx_from_position(cursor_position))
 		if item_node.is_enabled():
 			update_cursor()
 			return
 		cursor_position[dir] = cursor_position[dir] + jump
-	
+
 	cursor_position[dir] = int(clamp(cursor_position[dir], 0, grid_size[dir] - 1))
 	var item_node = _get_item_node(_idx_from_position(cursor_position))
 	if !item_node.is_enabled():
@@ -133,7 +145,10 @@ func _normalize_index(idx):
 	return normal_idx
 
 func _idx_from_position(pos):
-	return ( 9 * int(pos.y) ) + (int(pos.x) % 9)
+	return ( grid_size.x * int(pos.y) ) + (int(pos.x) % int(grid_size.x))
+
+func _position_from_idx(idx):
+	return Vector2( int(idx) % int(grid_size.x), int(idx / grid_size.x) )
 
 func _get_pointed_node():
 	return _get_item_node(_idx_from_position(cursor_position))

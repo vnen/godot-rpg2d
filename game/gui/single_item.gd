@@ -9,11 +9,11 @@ var item = null setget set_item,get_item
 var ready = false
 
 func set_item(v):
+	item = v
 	if item:
 		item_image = item.texture
 	else:
 		item_image = null
-	item = v
 	if(ready):
 		get_node("ItemImage").set_texture(item_image)
 func get_item():
@@ -45,7 +45,7 @@ func get_amount():
 	return item_amount
 
 func _ready():
-	set_amount(item_amount)
-	get_node("ItemImage").set_texture(item_image)
-	item = ResourceLoader.load("res://entities/inventory/items/small_potion.gd").new()
+#	set_amount(item_amount)
+#	get_node("ItemImage").set_texture(item_image)
+#	item = ResourceLoader.load("res://entities/inventory/items/small_potion.gd").new()
 	ready = true
