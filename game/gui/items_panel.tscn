@@ -1,0 +1,469 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://art/ui-theme/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://gui/items_panel.gd" type="Script" id=2]
+[ext_resource path="res://gui/single_item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/rpg-icons/P_Green05.png" type="Texture" id=4]
+[ext_resource path="res://gui/item_actions.tscn" type="PackedScene" id=5]
+
+[node name="ItemsPanel" type="Panel" groups=[ "receive_item_action" ]]
+
+anchor/left = 1
+anchor/right = 1
+anchor/bottom = 1
+margin/left = 370.0
+margin/top = 30.0
+margin/bottom = 90.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+script/script = ExtResource( 2 )
+__meta__ = { "__editor_plugin_screen__":"Script", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( 12.8909, -54.6548 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.10803 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 }, "_edit_lock_":true }
+
+[node name="ItemGrid" type="GridContainer" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+margin/left = 15.0
+margin/top = 15.0
+margin/right = 15.0
+margin/bottom = 15.0
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+columns = 9
+__meta__ = { "_edit_lock_":true, "_editor_collapsed":true }
+
+[node name="SingleItem" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem1" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 38.0
+margin/right = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem2" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 76.0
+margin/right = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem3" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 114.0
+margin/right = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem4" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 152.0
+margin/right = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem5" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 190.0
+margin/right = 224.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem6" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 228.0
+margin/right = 262.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem7" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 266.0
+margin/right = 300.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem8" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 304.0
+margin/right = 338.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem9" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/top = 38.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem10" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 38.0
+margin/top = 38.0
+margin/right = 72.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem11" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 76.0
+margin/top = 38.0
+margin/right = 110.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem12" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 114.0
+margin/top = 38.0
+margin/right = 148.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem13" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 152.0
+margin/top = 38.0
+margin/right = 186.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem14" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 190.0
+margin/top = 38.0
+margin/right = 224.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem15" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 228.0
+margin/top = 38.0
+margin/right = 262.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem16" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 266.0
+margin/top = 38.0
+margin/right = 300.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem17" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 304.0
+margin/top = 38.0
+margin/right = 338.0
+margin/bottom = 72.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem18" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/top = 76.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem19" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 38.0
+margin/top = 76.0
+margin/right = 72.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem20" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 76.0
+margin/top = 76.0
+margin/right = 110.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem21" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 114.0
+margin/top = 76.0
+margin/right = 148.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem22" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 152.0
+margin/top = 76.0
+margin/right = 186.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem23" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 190.0
+margin/top = 76.0
+margin/right = 224.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem24" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 228.0
+margin/top = 76.0
+margin/right = 262.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem25" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 266.0
+margin/top = 76.0
+margin/right = 300.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem26" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 304.0
+margin/top = 76.0
+margin/right = 338.0
+margin/bottom = 110.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem27" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/top = 114.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem28" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 38.0
+margin/top = 114.0
+margin/right = 72.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem29" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 76.0
+margin/top = 114.0
+margin/right = 110.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem30" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 114.0
+margin/top = 114.0
+margin/right = 148.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem31" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 152.0
+margin/top = 114.0
+margin/right = 186.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem32" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 190.0
+margin/top = 114.0
+margin/right = 224.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem33" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 228.0
+margin/top = 114.0
+margin/right = 262.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem34" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 266.0
+margin/top = 114.0
+margin/right = 300.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem35" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 304.0
+margin/top = 114.0
+margin/right = 338.0
+margin/bottom = 148.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem36" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/top = 152.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem37" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 38.0
+margin/top = 152.0
+margin/right = 72.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem38" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 76.0
+margin/top = 152.0
+margin/right = 110.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem39" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 114.0
+margin/top = 152.0
+margin/right = 148.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem40" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 152.0
+margin/top = 152.0
+margin/right = 186.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem41" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 190.0
+margin/top = 152.0
+margin/right = 224.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem42" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 228.0
+margin/top = 152.0
+margin/right = 262.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem43" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 266.0
+margin/top = 152.0
+margin/right = 300.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="SingleItem44" type="Control" parent="ItemGrid" instance=ExtResource( 3 )]
+
+_import_path = NodePath("")
+margin/left = 304.0
+margin/top = 152.0
+margin/right = 338.0
+margin/bottom = 186.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+item_image = ExtResource( 4 )
+
+[node name="ItemActionsPanel" type="Panel" parent="." instance=ExtResource( 5 )]
+
+_import_path = NodePath("")
+margin/top = 0.0
+margin/bottom = 0.0
+__meta__ = { "__editor_plugin_screen__":"Script", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -111.211 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+
+
