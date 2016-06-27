@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://levels/home_town.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://gizmos/dialogue_box.tscn" type="PackedScene" id=4]
+
+[node name="game" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+
+[node name="home_town" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 732.045, 319.885 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="dialogue" parent="GUI" instance=ExtResource( 4 )]
+
+

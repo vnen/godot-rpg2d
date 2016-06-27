@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://gizmos/dialogue_stylebox.tres" type="StyleBox" id=1]
+[ext_resource path="res://gizmos/dialogue_box.gd" type="Script" id=2]
+[ext_resource path="res://fonts/dialogue_mono.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://fonts/dialogue_bold_italic.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://fonts/dialogue_italic.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://fonts/dialogue_bold.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://fonts/dialogue.fnt" type="BitmapFont" id=7]
+
+[node name="dialogue" type="Panel" groups=[ "dialogue" ]]
+
+process/pause_mode = 2
+visibility/visible = false
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 30.0
+margin/top = 130.0
+margin/right = 30.0
+margin/bottom = 30.0
+custom_styles/panel = ExtResource( 1 )
+script/script = ExtResource( 2 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+text_wait = 0.1
+horizontal_ratio = 0.1
+
+[node name="dialog_text" type="RichTextLabel" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 20.0
+margin/right = 50.0
+margin/bottom = 20.0
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 5 )
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode/enabled = true
+bbcode/bbcode = ""
+visible_characters = -1
+
+
