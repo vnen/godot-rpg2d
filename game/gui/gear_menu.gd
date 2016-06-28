@@ -7,7 +7,6 @@ func _ready():
 	get_node("InventoryMenu/ItemsPanel").cursor = get_node("Cursor")
 	set_process_input(true)
 	call_deferred("popup")
-	print(Vector2(3,4)["y"])
 
 func _input(event):
 	for action in menu_actions:

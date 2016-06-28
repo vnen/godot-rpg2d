@@ -1,4 +1,4 @@
-	
+
 extends KinematicBody2D
 
 # Direction constants
@@ -78,7 +78,7 @@ func _process(delta):
 		current_animation = IDLE
 
 	update_animation()
-	
+
 	return
 	# Adjust Z order
 	for body in get_tree().get_nodes_in_group("entity"):
