@@ -2,20 +2,19 @@
 extends Panel
 
 var cursor_offset = Vector2(15, 20)
+var grid_size = Vector2()
+# Current cursor position
+var cursor_position = Vector2(0, 0)
+var selected_index = 0
+var last_index = -1
 
 # Cursor object
 var cursor = null setget set_cursor
-
-var grid_size = Vector2()
-var last_index = -1
-
 func set_cursor(cur):
 	cursor = cur
 	get_node("ItemActionsPanel").cursor = cursor
 	update_cursor()
 
-# Current cursor position
-var cursor_position = Vector2(0, 0)
 
 func _ready():
 	set_process_input(false) # It'll receive input from parent control
@@ -23,10 +22,14 @@ func _ready():
 	grid_size.x = get_node("ItemGrid").get_columns()
 	grid_size.y = 5
 
+	inventory.connect("item_added", self, "_on_item_added")
+	inventory.connect("item_removed", self, "_on_item_removed")
+	inventory.connect("item_changed", self, "_on_item_changed")
+
 	var item = items_manager.instance("small_potion")
 	randomize()
 	for i in range(16):
-		add_item(item, randi() % 10 + 1)
+		inventory.push_item({"item": item, "amount": randi() % 20 + 1})
 
 func _input(event):
 	var actionsPanel = get_node("ItemActionsPanel")
@@ -45,11 +48,24 @@ func _input(event):
 	if(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
 		select()
 
+func _on_item_added(item, index):
+	set_item(index, item.item, item.amount)
+	last_index = index
+
+func _on_item_removed(item, index):
+	remove_item(index)
+
+func _on_item_changed(new_item, index):
+	set_item(index, new_item.item, new_item.amount)
+
 func action_selected(action, item):
 	print("Doing ", action, " with ", item.name)
 	if action == "Drop":
 		remove_item(_idx_from_position(cursor_position))
 		return
+	elif action == "Details":
+		var idx = _idx_from_position(cursor_position)
+		inventory.merge_items(idx, idx - 1)
 	update_cursor()
 
 # Set an item in a certain point in the grid

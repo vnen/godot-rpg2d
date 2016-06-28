@@ -9,6 +9,7 @@ func _init():
 	description = "Restore 20HP to a character's health."
 	details = description
 #	can_use = true
+	stackable = true
 
 func effect(player):
 	player.HP += health_increase

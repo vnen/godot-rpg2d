@@ -159,7 +159,6 @@ margin/bottom = 30.0
 
 [node name="Cursor" type="Sprite" parent="." groups=[ "cursor" ]]
 
-transform/scale = Vector2( 1.1325, 1.1325 )
 texture = ExtResource( 4 )
 centered = false
 
