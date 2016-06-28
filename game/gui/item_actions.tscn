@@ -9,16 +9,17 @@ visibility/visible = false
 anchor/left = 1
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 180.0
-margin/top = 30.0
-margin/bottom = 90.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 180.0
+margin/top = 30.0
+margin/right = 0.0
+margin/bottom = 90.0
 script/script = ExtResource( 2 )
-__meta__ = { "__editor_plugin_screen__":"Script", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -111.211 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+__meta__ = { "__editor_plugin_screen__":"Script" }
 disabled_color = Color( 0.223529, 0.223529, 0.223529, 1 )
 enabled_color = Color( 1, 1, 1, 1 )
 cursor = null
@@ -27,27 +28,28 @@ cursor = null
 
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 20.0
-margin/top = 15.0
-margin/right = 15.0
-margin/bottom = 10.0
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 15.0
+margin/right = 15.0
+margin/bottom = 10.0
 alignment = 0
 
 [node name="Use" type="Label" parent="ActionList"]
 
-margin/top = 6.0
-margin/right = 145.0
-margin/bottom = 26.0
 rect/min_size = Vector2( 0, 20 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 6.0
+margin/right = 145.0
+margin/bottom = 26.0
 text = "Use"
 valign = 1
 percent_visible = 1.0
@@ -56,15 +58,16 @@ max_lines_visible = -1
 
 [node name="Equip" type="Label" parent="ActionList"]
 
-margin/top = 42.0
-margin/right = 145.0
-margin/bottom = 62.0
 rect/min_size = Vector2( 0, 20 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 42.0
+margin/right = 145.0
+margin/bottom = 62.0
 custom_colors/font_color = Color( 0.232337, 0.232337, 0.232337, 1 )
 text = "Equip"
 valign = 1
@@ -74,15 +77,16 @@ max_lines_visible = -1
 
 [node name="Unequip" type="Label" parent="ActionList"]
 
-margin/top = 78.0
-margin/right = 145.0
-margin/bottom = 98.0
 rect/min_size = Vector2( 0, 20 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 78.0
+margin/right = 145.0
+margin/bottom = 98.0
 text = "Unequip"
 valign = 1
 percent_visible = 1.0
@@ -91,15 +95,16 @@ max_lines_visible = -1
 
 [node name="Drop" type="Label" parent="ActionList"]
 
-margin/top = 114.0
-margin/right = 145.0
-margin/bottom = 134.0
 rect/min_size = Vector2( 0, 20 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 114.0
+margin/right = 145.0
+margin/bottom = 134.0
 text = "Drop"
 valign = 1
 percent_visible = 1.0
@@ -108,15 +113,16 @@ max_lines_visible = -1
 
 [node name="Give" type="Label" parent="ActionList"]
 
-margin/top = 150.0
-margin/right = 145.0
-margin/bottom = 170.0
 rect/min_size = Vector2( 0, 20 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 150.0
+margin/right = 145.0
+margin/bottom = 170.0
 text = "Give"
 valign = 1
 percent_visible = 1.0
@@ -125,15 +131,16 @@ max_lines_visible = -1
 
 [node name="Details" type="Label" parent="ActionList"]
 
-margin/top = 187.0
-margin/right = 145.0
-margin/bottom = 207.0
 rect/min_size = Vector2( 0, 20 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 187.0
+margin/right = 145.0
+margin/bottom = 207.0
 text = "Details"
 valign = 1
 percent_visible = 1.0

@@ -47,6 +47,9 @@ func _input(event):
 
 func action_selected(action, item):
 	print("Doing ", action, " with ", item.name)
+	if action == "Drop":
+		remove_item(_idx_from_position(cursor_position))
+		return
 	update_cursor()
 
 # Set an item in a certain point in the grid
@@ -70,8 +73,9 @@ func remove_item(idx):
 		set_item(i, next.item, next.item_amount)
 	_get_item_node(last_index).disable()
 	last_index -= 1
-	if _idx_from_position(cursor_position) >= idx:
-		cursor_position = _position_from_idx(_idx_from_position(cursor_position) - 1)
+	var current_index = _idx_from_position(cursor_position)
+	if current_index >= idx:
+		cursor_position = _position_from_idx(max(0, current_index - 1))
 		update_cursor()
 
 # Set an item amount
