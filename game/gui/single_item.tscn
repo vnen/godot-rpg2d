@@ -6,15 +6,17 @@
 
 [node name="SingleItem" type="Control"]
 
-margin/right = 34.0
-margin/bottom = 34.0
 rect/min_size = Vector2( 34, 34 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 34.0
+margin/bottom = 34.0
 script/script = ExtResource( 1 )
-__meta__ = { "__editor_plugin_screen__":"Script", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+__meta__ = { "__editor_plugin_screen__":"Script" }
 item_amount = 99
 item_image = null
 
@@ -26,17 +28,26 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+stretch_mode = 0
 
 [node name="ItemCount" type="Label" parent="."]
 
 anchor/top = 1
 anchor/right = 1
 anchor/bottom = 1
-margin/top = 12.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
+size_flags/vertical = 0
 theme/theme = ExtResource( 2 )
+margin/left = 0.0
+margin/top = 12.0
+margin/right = 0.0
+margin/bottom = 0.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )

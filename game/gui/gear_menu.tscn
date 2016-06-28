@@ -23,19 +23,19 @@ draw_bg = true
 
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 10.0
-margin/top = 10.0
-margin/right = 10.0
-margin/bottom = 10.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 1 )
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 10.0
+margin/bottom = 10.0
 custom_styles/panel = SubResource( 1 )
 popup/exclusive = true
 script/script = ExtResource( 2 )
-__meta__ = { "__editor_plugin_screen__":"Script", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -26.3831, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+__meta__ = { "__editor_plugin_screen__":"Script" }
 
 [node name="InventoryMenu" type="Container" parent="."]
 
@@ -45,55 +45,65 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
 __meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -455.841, -266.286 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":0.598737 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
 
 [node name="PartyPanel" type="Panel" parent="InventoryMenu"]
 
-margin/right = 250.0
-margin/bottom = 60.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 250.0
+margin/bottom = 60.0
 
 [node name="InfoPanel" type="Panel" parent="InventoryMenu"]
 
 anchor/bottom = 1
-margin/top = 60.0
-margin/right = 250.0
-margin/bottom = 30.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 60.0
+margin/right = 250.0
+margin/bottom = 30.0
 
 [node name="StatusPanel" type="Panel" parent="InventoryMenu"]
 
 anchor/top = 1
 anchor/right = 1
 anchor/bottom = 1
-margin/top = 30.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 30.0
+margin/right = 0.0
+margin/bottom = 0.0
 
 [node name="RichTextLabel1" type="RichTextLabel" parent="InventoryMenu/StatusPanel"]
 
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 20.0
-margin/top = 9.0
-margin/right = 20.0
-margin/bottom = 5.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 20.0
+margin/top = 9.0
+margin/right = 20.0
+margin/bottom = 5.0
 bbcode/enabled = true
 bbcode/bbcode = "Test of line status."
 visible_characters = -1
@@ -102,27 +112,29 @@ visible_characters = -1
 
 anchor/left = 1
 anchor/right = 1
-margin/left = 370.0
-margin/bottom = 30.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 370.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 30.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="InventoryMenu/HintPanel"]
 
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 20.0
-margin/top = 9.0
-margin/right = 20.0
-margin/bottom = 5.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 20.0
+margin/top = 9.0
+margin/right = 20.0
+margin/bottom = 5.0
 bbcode/enabled = true
 bbcode/bbcode = "Test of line hint"
 visible_characters = -1
@@ -133,19 +145,17 @@ anchor/left = 1
 anchor/top = 1
 anchor/right = 1
 anchor/bottom = 1
-margin/left = 370.0
-margin/top = 90.0
-margin/bottom = 30.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 1
 size_flags/vertical = 1
 theme/theme = ExtResource( 1 )
+margin/left = 370.0
+margin/top = 90.0
+margin/right = 0.0
+margin/bottom = 30.0
 
-[node name="ItemsPanel" type="Panel" parent="InventoryMenu" instance=ExtResource( 3 )]
-
-_import_path = NodePath("")
-__meta__ = { "__editor_plugin_screen__":"Script", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( 93.0316, -40.0478 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":1.22774 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 }, "_edit_lock_":true }
+[node name="ItemsPanel" parent="InventoryMenu" instance=ExtResource( 3 )]
 
 [node name="Cursor" type="Sprite" parent="." groups=[ "cursor" ]]
 
