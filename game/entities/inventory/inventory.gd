@@ -40,7 +40,7 @@ func push_item(item):
 # Remove an item from the inventory and readjust the positions
 func remove_item(index):
 	assert (index >= 0 and index < size)
-	var item = _get_item(index)
+	var item = get_item(index)
 	for i in range(index, size - 1):
 		inventory[i] = inventory[i + 1]
 	inventory[size - 1] = null
@@ -57,8 +57,8 @@ func update_item(index, new_item):
 # the remaining will stay on the old item. If the items can't stack,
 # then replace one for the other.
 func merge_items(index_from, index_to):
-	var to = _get_item(index_to)
-	var from = _get_item(index_from)
+	var to = get_item(index_to)
+	var from = get_item(index_from)
 	if to.item.stackable and to.item.name == from.item.name:
 		var max_stack = max(to.item.max_stack, MAX_STACK_AMOUNT)
 		to.amount += from.amount
@@ -77,7 +77,7 @@ func merge_items(index_from, index_to):
 		update_item(index_from, from)
 		update_item(index_to, to)
 
-func _get_item(index):
+func get_item(index):
 	assert(index >= 0 and index < MAX_INVENTORY_SIZE)
 	return inventory[index]
 
