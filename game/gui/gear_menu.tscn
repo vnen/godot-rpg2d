@@ -157,6 +157,9 @@ margin/bottom = 30.0
 
 [node name="ItemsPanel" parent="InventoryMenu" instance=ExtResource( 3 )]
 
+cursor_offset = Vector2( 15, 20 )
+hold_offset = Vector2( 10, 10 )
+
 [node name="Cursor" type="Sprite" parent="." groups=[ "cursor" ]]
 
 texture = ExtResource( 4 )

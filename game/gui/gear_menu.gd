@@ -1,7 +1,7 @@
 
 extends PopupPanel
 
-var menu_actions = ["menu_up","menu_down","menu_left","menu_right","menu_select"]
+var menu_actions = ["menu_up","menu_down","menu_left","menu_right","menu_select","menu_move","menu_cancel"]
 
 func _ready():
 	get_node("InventoryMenu/ItemsPanel").cursor = get_node("Cursor")

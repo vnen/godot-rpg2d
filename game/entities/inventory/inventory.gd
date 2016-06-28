@@ -66,9 +66,10 @@ func merge_items(index_from, index_to):
 			from.amount = to.amount - max_stack
 			to.amount = max_stack
 			update_item(index_from, from)
+			update_item(index_to, to)
 		else:
+			update_item(index_to, to)
 			remove_item(index_from)
-		update_item(index_to, to)
 	else:
 		var temp = to
 		to = from

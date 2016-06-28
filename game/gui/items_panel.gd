@@ -1,12 +1,14 @@
 
 extends Panel
 
-var cursor_offset = Vector2(15, 20)
+export var cursor_offset = Vector2(15, 20)
+export var hold_offset = Vector2(10,10)
 var grid_size = Vector2()
 # Current cursor position
 var cursor_position = Vector2(0, 0)
 var selected_index = 0
 var last_index = -1
+var holding = null
 
 # Cursor object
 var cursor = null setget set_cursor
@@ -37,16 +39,23 @@ func _input(event):
 	if(actionsPanel.is_visible()):
 		actionsPanel._input(event)
 		return
-	if(event.is_action("menu_right") and event.is_pressed()):
+	elif(event.is_action("menu_right") and event.is_pressed()):
 		_move_cursor("x", 1)
-	if(event.is_action("menu_left") and event.is_pressed()):
+	elif(event.is_action("menu_left") and event.is_pressed()):
 		_move_cursor("x", -1)
-	if(event.is_action("menu_down") and event.is_pressed()):
+	elif(event.is_action("menu_down") and event.is_pressed()):
 		_move_cursor("y", 1)
-	if(event.is_action("menu_up") and event.is_pressed()):
+	elif(event.is_action("menu_up") and event.is_pressed()):
 		_move_cursor("y", -1)
-	if(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
+	elif(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
 		select()
+	elif(event.is_action("menu_move") and event.is_pressed() and !event.is_echo()):
+		if holding != null:
+			move_drop()
+		else:
+			move_hold()
+	elif(event.is_action("menu_cancel") and event.is_pressed() and !event.is_echo()):
+		move_cancel()
 
 func _on_item_added(item, index):
 	set_item(index, item.item, item.amount)
@@ -156,6 +165,28 @@ func select():
 	var actionsPanel = get_node("ItemActionsPanel")
 	actionsPanel.set_item(item)
 	actionsPanel.show()
+
+# Hold an item to move
+func move_hold():
+	var pointed = _get_pointed_node()
+	holding = {"node": pointed.duplicate(), "index": _idx_from_position(cursor_position)}
+	cursor.add_child(holding.node)
+	holding.node.set_pos(hold_offset)
+
+# Drop the moved item
+func move_drop():
+	var target_index = _idx_from_position(cursor_position)
+	if holding.index != target_index:
+		print("merging from %s to %s" % [holding.index, target_index])
+		inventory.merge_items(holding.index, target_index)
+	move_cancel()
+
+# Cancel the move
+func move_cancel():
+	if holding == null:
+		return
+	holding.node.free()
+	holding = null
 
 func _normalize_index(idx):
 	assert(idx >= 0 and idx < 45)

@@ -63,10 +63,13 @@ func disable_action(action):
 func _input(event):
 	if(event.is_action("menu_down") and event.is_pressed()):
 		_skip_cursor(1)
-	if(event.is_action("menu_up") and event.is_pressed()):
+	elif(event.is_action("menu_up") and event.is_pressed()):
 		_skip_cursor(-1)
-	if(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
+	elif(event.is_action("menu_select") and event.is_pressed() and !event.is_echo()):
 		select()
+	elif(event.is_action("menu_cancel") and event.is_pressed() and !event.is_echo()):
+		emit_signal("action_selected", "cancel", item)
+		hide()
 	pass
 
 func select():
