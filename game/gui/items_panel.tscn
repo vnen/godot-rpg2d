@@ -22,9 +22,15 @@ margin/right = 0.0
 margin/bottom = 90.0
 script/script = ExtResource( 2 )
 __meta__ = { "__editor_plugin_screen__":"Script", "_edit_lock_":true }
+cursor_offset = Vector2( 15, 20 )
+hold_offset = Vector2( 10, 10 )
+default_message = "Select item"
+hold_message = "Move to where\?"
+action_message = "Do what\?"
 
 [node name="ItemGrid" type="GridContainer" parent="."]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -36,7 +42,7 @@ margin/top = 15.0
 margin/right = 15.0
 margin/bottom = 15.0
 columns = 9
-__meta__ = { "_edit_lock_":true, "_editor_collapsed":true }
+__meta__ = { "_edit_lock_":true }
 
 [node name="SingleItem" parent="ItemGrid" instance=ExtResource( 3 )]
 
@@ -373,7 +379,6 @@ item_image = ExtResource( 4 )
 [node name="ItemActionsPanel" parent="." instance=ExtResource( 5 )]
 
 margin/top = 0.0
-margin/right = 0.0
 margin/bottom = 0.0
 
 

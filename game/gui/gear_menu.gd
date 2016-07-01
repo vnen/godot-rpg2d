@@ -4,7 +4,10 @@ extends PopupPanel
 var menu_actions = ["menu_up","menu_down","menu_left","menu_right","menu_select","menu_move","menu_cancel"]
 
 func _ready():
-	get_node("InventoryMenu/ItemsPanel").cursor = get_node("Cursor")
+	var itemsPanel = get_node("InventoryMenu/ItemsPanel")
+	itemsPanel.connect("hovered_item", get_node("InventoryMenu/StatusPanel"), "item_hovered")
+	itemsPanel.connect("update_hint", get_node("InventoryMenu/HintPanel"), "update_hint")
+	itemsPanel.cursor = get_node("Cursor")
 	set_process_input(true)
 	call_deferred("popup")
 

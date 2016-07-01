@@ -1,8 +1,15 @@
 
 extends Panel
 
+signal hovered_item(item)
+signal update_hint(hint)
+
 export var cursor_offset = Vector2(15, 20)
 export var hold_offset = Vector2(10,10)
+export var default_message = "Select item"
+export var hold_message = "Move to where?"
+export var action_message = "Do what?"
+
 var grid_size = Vector2()
 # Current cursor position
 var cursor_position = Vector2(0, 0)
@@ -16,6 +23,10 @@ func set_cursor(cur):
 	cursor = cur
 	get_node("ItemActionsPanel").cursor = cursor
 	update_cursor()
+	var pointed = _get_pointed_node()
+	if pointed.is_enabled():
+		emit_signal("hovered_item", pointed.item)
+	emit_signal("update_hint", default_message)
 
 
 func _ready():
@@ -28,10 +39,12 @@ func _ready():
 	inventory.connect("item_removed", self, "_on_item_removed")
 	inventory.connect("item_changed", self, "_on_item_changed")
 
-	var item = items_manager.instance("small_potion")
+	emit_signal("update_hint", default_message)
+
+	var items = [items_manager.instance("small_potion"), items_manager.instance("small_elixir")]
 	randomize()
 	for i in range(16):
-		inventory.push_item({"item": item, "amount": randi() % 20 + 1})
+		inventory.push_item({"item": items[randi() % items.size()], "amount": randi() % 20 + 1})
 
 func _input(event):
 	var actionsPanel = get_node("ItemActionsPanel")
@@ -82,6 +95,7 @@ func set_item(idx, item, amount):
 	return true
 
 func action_selected(action, item):
+	emit_signal("update_hint", default_message)
 	print("Doing ", action, " with ", item.name)
 	if action == "Drop":
 		inventory.remove_item(selected_index)
@@ -92,6 +106,7 @@ func action_selected(action, item):
 
 # Move the cursor in direction (x or y) by jump slots
 func _move_cursor(dir, jump):
+	var old_index = selected_index
 	if dir == "x":
 		var old_column = int(selected_index) % int(grid_size.x)
 		selected_index += sign(jump)
@@ -106,6 +121,8 @@ func _move_cursor(dir, jump):
 			# Passed the limit, revert
 			selected_index -= sign(jump) * grid_size.x
 	selected_index = int(clamp(selected_index,0,last_index))
+	if selected_index != old_index:
+		emit_signal("hovered_item", inventory.get_item(selected_index).item)
 	update_cursor()
 
 # Update cursor position
@@ -116,6 +133,7 @@ func update_cursor():
 
 # Select the item under cursor
 func select():
+	emit_signal("update_hint", action_message)
 	var item = inventory.get_item(selected_index)
 	var actionsPanel = get_node("ItemActionsPanel")
 	actionsPanel.set_item(item.item)
@@ -123,6 +141,7 @@ func select():
 
 # Hold an item to move
 func move_hold():
+	emit_signal("update_hint", hold_message)
 	var pointed = _get_pointed_node()
 	holding = {"node": pointed.duplicate(), "index": selected_index}
 	cursor.add_child(holding.node)
@@ -138,6 +157,7 @@ func move_drop():
 
 # Cancel the move
 func move_cancel():
+	emit_signal("update_hint", default_message)
 	if holding == null:
 		return
 	holding.node.free()
