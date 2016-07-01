@@ -6,7 +6,7 @@
 [ext_resource path="res://art/rpg-icons/P_Green05.png" type="Texture" id=4]
 [ext_resource path="res://gui/item_actions.tscn" type="PackedScene" id=5]
 
-[node name="ItemsPanel" type="Panel" groups=[ "receive_item_action" ]]
+[node name="ItemsPanel" type="Panel"]
 
 anchor/left = 1
 anchor/right = 1
