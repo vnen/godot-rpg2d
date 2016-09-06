@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://art/ui-theme/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://gui/status_panel.gd" type="Script" id=2]
+
+[node name="StatusPanel" type="Panel"]
+
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 30.0
+margin/right = 0.0
+margin/bottom = 0.0
+script/script = ExtResource( 2 )
+
+[node name="StatusLine" type="RichTextLabel" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 20.0
+margin/top = 9.0
+margin/right = 20.0
+margin/bottom = 5.0
+bbcode/enabled = true
+bbcode/bbcode = "Test of line status."
+visible_characters = -1
+
+

@@ -1,4 +1,4 @@
-	
+
 extends KinematicBody2D
 
 # Direction constants
@@ -19,6 +19,12 @@ export(float) var walk_animation_scale = 1.2
 var current_animation=IDLE
 var current_direction=SOUTH
 
+# Player data
+
+var HP = 500 setget ,get_hp
+
+func get_hp():
+	return HP
 
 func _ready():
 	var treeplayer = get_node("treeplayer")
@@ -72,7 +78,8 @@ func _process(delta):
 		current_animation = IDLE
 
 	update_animation()
-	
+
+	return
 	# Adjust Z order
 	for body in get_tree().get_nodes_in_group("entity"):
 		if(body == self):

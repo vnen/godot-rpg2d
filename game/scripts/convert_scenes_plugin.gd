@@ -22,13 +22,16 @@ func traverse_dir(path):
 		print ("subpath %s" % subpath)
 		if dir.current_is_dir():
 			traverse_dir(path.plus_file(subpath))
-		elif subpath.extension() == "xscn":
+		elif subpath.extension().begins_with("x"):
 			convert_scene(path.plus_file(subpath))
 
 func convert_scene(path):
 	print("Converting file %s to %s" % [path,path.basename() + ".tscn"])
-	var packedScene = ResourceLoader.load(path, "PackedScene")
-	ResourceSaver.save(path.basename() + ".tscn", packedScene)
+	var resource = ResourceLoader.load(path)
+	if resource extends PackedScene:
+		ResourceSaver.save(path.basename() + ".tscn", resource)
+	else:
+		ResourceSaver.save(path.basename() + ".tres", resource)
 
 func _init():
 	traverse_dir("res://")

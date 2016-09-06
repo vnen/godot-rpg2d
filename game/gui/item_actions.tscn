@@ -1,0 +1,150 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://art/ui-theme/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://gui/item_actions.gd" type="Script" id=2]
+
+[node name="ItemActionsPanel" type="Panel"]
+
+visibility/visible = false
+anchor/left = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 180.0
+margin/top = 30.0
+margin/right = 0.0
+margin/bottom = 90.0
+script/script = ExtResource( 2 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+disabled_color = Color( 0.223529, 0.223529, 0.223529, 1 )
+enabled_color = Color( 1, 1, 1, 1 )
+cursor = null
+
+[node name="ActionList" type="VBoxContainer" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 15.0
+margin/right = 15.0
+margin/bottom = 10.0
+alignment = 0
+
+[node name="Use" type="Label" parent="ActionList"]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 6.0
+margin/right = 145.0
+margin/bottom = 26.0
+text = "Use"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Equip" type="Label" parent="ActionList"]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 42.0
+margin/right = 145.0
+margin/bottom = 62.0
+custom_colors/font_color = Color( 0.232337, 0.232337, 0.232337, 1 )
+text = "Equip"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Unequip" type="Label" parent="ActionList"]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 78.0
+margin/right = 145.0
+margin/bottom = 98.0
+text = "Unequip"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Drop" type="Label" parent="ActionList"]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 114.0
+margin/right = 145.0
+margin/bottom = 134.0
+text = "Drop"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Give" type="Label" parent="ActionList"]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 150.0
+margin/right = 145.0
+margin/bottom = 170.0
+text = "Give"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Details" type="Label" parent="ActionList"]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 187.0
+margin/right = 145.0
+margin/bottom = 207.0
+text = "Details"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
