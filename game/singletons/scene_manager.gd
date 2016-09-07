@@ -18,7 +18,7 @@ func do_warp(current_level, level, warp):
 	new_level.add_to_group("level")
 	game.add_child(new_level)
 	game.set_camera_limits(new_level.map_size)
-	
+
 	var target = new_level.find_node(warp)
 	if(target and target extends Position2D):
 		for body in get_tree().get_nodes_in_group("player"):

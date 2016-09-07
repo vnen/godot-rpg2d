@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://art/ui-theme/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://gui/gear_menu.gd" type="Script" id=2]
+[ext_resource path="res://gui/hint_panel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://gui/items_panel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui/status_panel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://art/ui-elements-lpc/expansion/mouse_pointer.png" type="Texture" id=6]
+[ext_resource path="res://gui/flash_cursor.tres" type="Animation" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[node name="GearMenu" type="PopupPanel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 10.0
+margin/bottom = 10.0
+custom_styles/panel = SubResource( 1 )
+popup/exclusive = true
+script/script = ExtResource( 2 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
+
+[node name="InventoryMenu" type="Container" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+__meta__ = { "__editor_plugin_screen__":"2D", "__editor_plugin_states__":{ "2D":{ "ofs":Vector2( -455.841, -266.286 ), "snap_grid":false, "snap_offset":Vector2( 0, 0 ), "snap_pixel":false, "snap_relative":false, "snap_rotation":false, "snap_rotation_offset":0.0, "snap_rotation_step":0.261799, "snap_show_grid":false, "snap_step":Vector2( 10, 10 ), "zoom":0.598737 }, "3D":{ "ambient_light_color":Color( 0.15, 0.15, 0.15, 1 ), "default_light":true, "default_srgb":false, "deflight_rot_x":0.942478, "deflight_rot_y":0.628319, "fov":45.0, "show_grid":true, "show_origin":true, "viewport_mode":1, "viewports":[ { "distance":4.0, "listener":true, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 }, { "distance":4.0, "listener":false, "pos":Vector3( 0, 0, 0 ), "use_environment":false, "use_orthogonal":false, "x_rot":0.0, "y_rot":0.0 } ], "zfar":500.0, "znear":0.1 }, "Anim":{ "visible":false } }, "__editor_run_settings__":{ "custom_args":"-l $scene", "run_mode":0 } }
+
+[node name="PartyPanel" type="Panel" parent="InventoryMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 250.0
+margin/bottom = 60.0
+
+[node name="InfoPanel" type="Panel" parent="InventoryMenu"]
+
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 60.0
+margin/right = 250.0
+margin/bottom = 30.0
+
+[node name="HintPanel" parent="InventoryMenu" instance=ExtResource( 3 )]
+
+[node name="ItemsPanel" parent="InventoryMenu" instance=ExtResource( 4 )]
+
+hold_message = "Move to/merge where\?"
+
+[node name="JoyHintPanel" type="Panel" parent="InventoryMenu"]
+
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 370.0
+margin/top = 90.0
+margin/right = 0.0
+margin/bottom = 30.0
+
+[node name="StatusPanel" parent="InventoryMenu" instance=ExtResource( 5 )]
+
+[node name="Cursor" type="Sprite" parent="." groups=[ "cursor" ]]
+
+texture = ExtResource( 6 )
+centered = false
+
+[node name="anim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/flash_cursor = ExtResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "flash_cursor"
+
+

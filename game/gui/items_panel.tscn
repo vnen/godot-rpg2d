@@ -1,0 +1,384 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://art/ui-theme/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://gui/items_panel.gd" type="Script" id=2]
+[ext_resource path="res://gui/single_item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/rpg-icons/P_Green05.png" type="Texture" id=4]
+[ext_resource path="res://gui/item_actions.tscn" type="PackedScene" id=5]
+
+[node name="ItemsPanel" type="Panel"]
+
+anchor/left = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 1
+size_flags/vertical = 1
+theme/theme = ExtResource( 1 )
+margin/left = 370.0
+margin/top = 30.0
+margin/right = 0.0
+margin/bottom = 90.0
+script/script = ExtResource( 2 )
+__meta__ = { "__editor_plugin_screen__":"Script", "_edit_lock_":true }
+cursor_offset = Vector2( 15, 20 )
+hold_offset = Vector2( 10, 10 )
+default_message = "Select item"
+hold_message = "Move to where\?"
+action_message = "Do what\?"
+
+[node name="ItemGrid" type="GridContainer" parent="."]
+
+editor/display_folded = true
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 15.0
+margin/top = 15.0
+margin/right = 15.0
+margin/bottom = 15.0
+columns = 9
+__meta__ = { "_edit_lock_":true }
+
+[node name="SingleItem" parent="ItemGrid" instance=ExtResource( 3 )]
+
+item_image = ExtResource( 4 )
+
+[node name="SingleItem1" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 38.0
+margin/right = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem2" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 76.0
+margin/right = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem3" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 114.0
+margin/right = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem4" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 152.0
+margin/right = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem5" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 190.0
+margin/right = 224.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem6" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 228.0
+margin/right = 262.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem7" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 266.0
+margin/right = 300.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem8" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 304.0
+margin/right = 338.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem9" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/top = 38.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem10" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 38.0
+margin/top = 38.0
+margin/right = 72.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem11" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 76.0
+margin/top = 38.0
+margin/right = 110.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem12" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 114.0
+margin/top = 38.0
+margin/right = 148.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem13" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 152.0
+margin/top = 38.0
+margin/right = 186.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem14" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 190.0
+margin/top = 38.0
+margin/right = 224.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem15" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 228.0
+margin/top = 38.0
+margin/right = 262.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem16" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 266.0
+margin/top = 38.0
+margin/right = 300.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem17" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 304.0
+margin/top = 38.0
+margin/right = 338.0
+margin/bottom = 72.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem18" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/top = 76.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem19" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 38.0
+margin/top = 76.0
+margin/right = 72.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem20" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 76.0
+margin/top = 76.0
+margin/right = 110.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem21" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 114.0
+margin/top = 76.0
+margin/right = 148.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem22" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 152.0
+margin/top = 76.0
+margin/right = 186.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem23" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 190.0
+margin/top = 76.0
+margin/right = 224.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem24" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 228.0
+margin/top = 76.0
+margin/right = 262.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem25" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 266.0
+margin/top = 76.0
+margin/right = 300.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem26" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 304.0
+margin/top = 76.0
+margin/right = 338.0
+margin/bottom = 110.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem27" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/top = 114.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem28" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 38.0
+margin/top = 114.0
+margin/right = 72.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem29" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 76.0
+margin/top = 114.0
+margin/right = 110.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem30" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 114.0
+margin/top = 114.0
+margin/right = 148.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem31" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 152.0
+margin/top = 114.0
+margin/right = 186.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem32" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 190.0
+margin/top = 114.0
+margin/right = 224.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem33" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 228.0
+margin/top = 114.0
+margin/right = 262.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem34" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 266.0
+margin/top = 114.0
+margin/right = 300.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem35" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 304.0
+margin/top = 114.0
+margin/right = 338.0
+margin/bottom = 148.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem36" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/top = 152.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem37" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 38.0
+margin/top = 152.0
+margin/right = 72.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem38" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 76.0
+margin/top = 152.0
+margin/right = 110.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem39" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 114.0
+margin/top = 152.0
+margin/right = 148.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem40" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 152.0
+margin/top = 152.0
+margin/right = 186.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem41" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 190.0
+margin/top = 152.0
+margin/right = 224.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem42" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 228.0
+margin/top = 152.0
+margin/right = 262.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem43" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 266.0
+margin/top = 152.0
+margin/right = 300.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="SingleItem44" parent="ItemGrid" instance=ExtResource( 3 )]
+
+margin/left = 304.0
+margin/top = 152.0
+margin/right = 338.0
+margin/bottom = 186.0
+item_image = ExtResource( 4 )
+
+[node name="ItemActionsPanel" parent="." instance=ExtResource( 5 )]
+
+margin/top = 0.0
+margin/bottom = 0.0
+
+
